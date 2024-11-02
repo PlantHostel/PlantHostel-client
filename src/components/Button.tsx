@@ -14,7 +14,7 @@ const ButtonComponent = styled.button`
     background-color: #073a29;
     border-radius: 10px;
     padding: 20px;
+    font-size: 16px;
     text-align: center;
-    margin: 10px 20px;
     cursor: pointer;
 `;

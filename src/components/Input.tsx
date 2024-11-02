@@ -22,7 +22,6 @@ export const Input = ({ labelName, type, name, id, placeholder }: InputProps) =>
 const InputSection = styled.div`
     display: flex;
     flex-direction: column;
-    margin: 0px 20px;
 
     label .labelName {
         display: block;
@@ -33,13 +32,13 @@ const InputSection = styled.div`
     label input {
         box-sizing: border-box;
         height: 52px;
-        border: none;
+        border: 1px solid #dee3e1;
         background-color: #f1f3f5;
         border-radius: 12px;
         background-color: rgba(255, 255, 255, 0.15);
         width: 100%;
         padding: 17px 20px;
         margin-bottom: 20px;
-        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.06);
+        font-size: 16px;
     }
 `;
