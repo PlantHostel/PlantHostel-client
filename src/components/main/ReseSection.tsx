@@ -1,0 +1,42 @@
+import styled from "styled-components";
+
+export default function MainReseSection() {
+  return (
+    <ReseSection>
+      <button className="rese-option">
+        <img src="../src/assets/calender-front-color.png" alt="" />
+        <span className="rese-label">병원 예약</span>
+      </button>
+      <button className="rese-option">
+        <img src="../src/assets/travel-front-color.png" alt="" />
+        <span className="rese-label">호텔 예약</span>
+      </button>
+    </ReseSection>
+  );
+}
+
+const ReseSection = styled.div`
+  display: flex;
+  width: 350px;
+  height: 64px;
+  gap: 12px;
+  margin-bottom: 20px;
+  .rese-option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 169px;
+    height: 64px;
+    gap: 12px;
+    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.06);
+    border-radius: 12px;
+    border: none;
+  }
+
+  .rese-label {
+    font-size: 18px;
+    font-weight: bold;
+  }
+`;

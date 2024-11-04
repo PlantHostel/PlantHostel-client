@@ -53,4 +53,10 @@ const ButtonComponent = styled.button<{
     `
     width: 171px;
   `}
+
+${(props) =>
+    props.size === "main" &&
+    `
+    width: 310px;
+  `}
 `;
