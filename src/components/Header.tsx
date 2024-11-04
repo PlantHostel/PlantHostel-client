@@ -7,7 +7,7 @@ interface HeaderProps {
     right?: ReactNode;
 }
 
-export const Header = ({ title, left, right }: HeaderProps) => {
+export const Header = ({ title, left = "", right = "" }: HeaderProps) => {
     return (
         <HeaderDiv>
             <div className="header_left">{left}</div>
