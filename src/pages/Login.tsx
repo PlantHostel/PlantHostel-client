@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Header } from "../components/common/Header";
 import { getLogoImage } from "../utils/getImage";
-import { Button } from "../components/common/Button";
+import { CommonButton } from "../components/common/CommonButton";
 import { Input } from "../components/common/Input";
 import { Link } from "react-router-dom";
 import { SocialLoginButton } from "../components/login/SocialLoginButton";
@@ -43,7 +43,7 @@ export const Login = () => {
         <SocialLoginButton text="네이버 로그인" type="naver" />
         <SocialLoginButton text="구글 로그인" type="google" />
       </SocialLoginButtons>
-      <Button text={"로그인"} />
+      <CommonButton text={"로그인"} />
       <div className="sign_in">
         아직 회원이 아니신가요? <span>회원가입</span>
       </div>
