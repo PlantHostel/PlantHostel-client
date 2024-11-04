@@ -21,7 +21,7 @@ export const ButtonSection = () => {
 };
 
 const ButtonSectionDiv = styled.div`
-    margin-top: 80px;
+    margin-top: 40px;
     display: flex;
     flex-direction: column;
     padding: 20px;

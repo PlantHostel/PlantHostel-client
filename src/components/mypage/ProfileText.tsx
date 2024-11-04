@@ -25,5 +25,6 @@ const ProfileTextDiv = styled.div`
 
     .value {
         color: #5d6762;
+        white-space: nowrap;
     }
 `;
