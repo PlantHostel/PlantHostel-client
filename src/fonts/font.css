@@ -2,3 +2,8 @@
     font-family: "Pretendard";
     src: url(./Pretendard-SemiBold.otf);
 }
+
+@font-face {
+    font-family: "Rajdhani Bold";
+    src: url(./Rajdhani-Bold.ttf);
+}
