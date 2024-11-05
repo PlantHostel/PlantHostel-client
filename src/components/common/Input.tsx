@@ -30,6 +30,7 @@ const InputSection = styled.div`
     }
 
     label input {
+        font-family: "Pretendard-Regular";
         box-sizing: border-box;
         height: 52px;
         border: 1px solid #dee3e1;
@@ -37,8 +38,8 @@ const InputSection = styled.div`
         border-radius: 12px;
         background-color: rgba(255, 255, 255, 0.15);
         width: 100%;
-        padding: 17px 20px;
-        margin-bottom: 20px;
+        padding: 17px 16px;
+        margin-bottom: 16px;
         font-size: 16px;
     }
 `;
