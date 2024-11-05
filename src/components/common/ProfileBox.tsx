@@ -2,14 +2,9 @@ import styled from "styled-components";
 import ProfileImage from "../../assets/profile-image.png";
 import { ProfileText } from "../mypage/ProfileText";
 
-interface ProfileBoxProps {
-    boxLabel: string;
-}
-
-export const ProfileBox = ({ boxLabel }: ProfileBoxProps) => {
+export const ProfileBox = () => {
     return (
         <Profile>
-            <div className="profile-label">{boxLabel}</div>
             <Box>
                 <div className="profile-image">
                     <img src={ProfileImage} alt="" />
@@ -25,14 +20,12 @@ export const ProfileBox = ({ boxLabel }: ProfileBoxProps) => {
 };
 
 const Profile = styled.div`
-    margin-top: 30px;
     display: flex;
     flex-direction: column;
 
     .profile-label {
         font-size: 20px;
         margin-bottom: 12px;
-        font-family: "Pretendard";
     }
 
     .profile-box {

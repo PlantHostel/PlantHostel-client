@@ -32,5 +32,7 @@ const ButtonDiv = styled.div`
 
     .label {
         font-size: 12px;
+        font-family: "Pretendard-Regular";
+        line-height: 18px;
     }
 `;

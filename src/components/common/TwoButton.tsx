@@ -29,8 +29,9 @@ const TwoButtonDiv = styled.div`
         gap: 12px;
         width: 350px;
         height: 50px;
-        font-size: 14px;
-        font-family: "Pretendard";
+        font-size: 13px;
+        line-height: 18px;
+        font-family: "Pretendard-SemiBold";
     }
 `;
 
