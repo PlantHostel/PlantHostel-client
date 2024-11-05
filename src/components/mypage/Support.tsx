@@ -24,14 +24,20 @@ const SupportDiv = styled.div`
 
     .label {
         font-size: 16px;
-        font-family: "Pretendard";
+        line-height: 26px;
     }
 
     .button {
         color: #117956;
+        font-size: 12px;
+        line-height: 18px;
+        font-family: "Pretendard-Regular";
     }
 
     .text {
+        font-family: "Pretendard-Regular";
+        font-size: 12px;
+        line-height: 18px;
         color: #9ca3a0;
     }
 

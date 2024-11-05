@@ -5,11 +5,11 @@ import { Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import PlantImage from "../../assets/plant-image.png";
 import { ProfileText } from "../mypage/ProfileText";
+import Title from "./Title";
 
 export const Carousel = () => {
     return (
         <>
-            <Label>나의 반려식물</Label>
             <BoxDiv>
                 <CarouselDiv>
                     <Swiper
@@ -17,17 +17,19 @@ export const Carousel = () => {
                         modules={[Navigation, Pagination]}
                         slidesPerView={1}
                         loop={true}
-                        pagination={{ clickable: true, el: ".custom-pagination" }}
-                    >
+                        pagination={{ clickable: true, el: ".custom-pagination" }}>
                         <SwiperSlide>
                             <div className="plant-image">
                                 <img src={PlantImage} alt="" />
                             </div>
                             <div className="plant-info">
                                 <ProfileText label={"이름"} value={"튼튼이"} />
-                                <ProfileText label={"종"} value={"올리브나무"} />
+                                <ProfileText label={"종"} value={"몬스테라 여인초 올리브나무"} />
                                 <ProfileText label={"난이도"} value={"중"} />
-                                <ProfileText label={"특징"} value={"공기 정화 식물"} />
+                                <ProfileText
+                                    label={"특징"}
+                                    value={"공기 정화 식물의 대명사! 일주일에 한 번 물만 잘 주면 키우기 너무 편한 식물"}
+                                />
                                 <ProfileText label={"상태"} value={"매우 양호"} />
                             </div>
                         </SwiperSlide>
@@ -37,9 +39,12 @@ export const Carousel = () => {
                             </div>
                             <div className="plant-info">
                                 <ProfileText label={"이름"} value={"튼튼이"} />
-                                <ProfileText label={"종"} value={"올리브나무"} />
+                                <ProfileText label={"종"} value={"몬스테라 여인초 올리브나무"} />
                                 <ProfileText label={"난이도"} value={"중"} />
-                                <ProfileText label={"특징"} value={"공기 정화 식물"} />
+                                <ProfileText
+                                    label={"특징"}
+                                    value={"공기 정화 식물의 대명사! 일주일에 한 번 물만 잘 주면 키우기 너무 편한 식물"}
+                                />
                                 <ProfileText label={"상태"} value={"매우 양호"} />
                             </div>
                         </SwiperSlide>
@@ -49,9 +54,12 @@ export const Carousel = () => {
                             </div>
                             <div className="plant-info">
                                 <ProfileText label={"이름"} value={"튼튼이"} />
-                                <ProfileText label={"종"} value={"올리브나무"} />
+                                <ProfileText label={"종"} value={"몬스테라 여인초 올리브나무"} />
                                 <ProfileText label={"난이도"} value={"중"} />
-                                <ProfileText label={"특징"} value={"공기 정화 식물"} />
+                                <ProfileText
+                                    label={"특징"}
+                                    value={"공기 정화 식물의 대명사! 일주일에 한 번 물만 잘 주면 키우기 너무 편한 식물"}
+                                />
                                 <ProfileText label={"상태"} value={"매우 양호"} />
                             </div>
                         </SwiperSlide>
@@ -61,9 +69,12 @@ export const Carousel = () => {
                             </div>
                             <div className="plant-info">
                                 <ProfileText label={"이름"} value={"튼튼이"} />
-                                <ProfileText label={"종"} value={"올리브나무"} />
+                                <ProfileText label={"종"} value={"몬스테라 여인초 올리브나무"} />
                                 <ProfileText label={"난이도"} value={"중"} />
-                                <ProfileText label={"특징"} value={"공기 정화 식물"} />
+                                <ProfileText
+                                    label={"특징"}
+                                    value={"공기 정화 식물의 대명사! 일주일에 한 번 물만 잘 주면 키우기 너무 편한 식물"}
+                                />
                                 <ProfileText label={"상태"} value={"매우 양호"} />
                             </div>
                         </SwiperSlide>
@@ -73,9 +84,12 @@ export const Carousel = () => {
                             </div>
                             <div className="plant-info">
                                 <ProfileText label={"이름"} value={"튼튼이"} />
-                                <ProfileText label={"종"} value={"올리브나무"} />
+                                <ProfileText label={"종"} value={"몬스테라 여인초 올리브나무"} />
                                 <ProfileText label={"난이도"} value={"중"} />
-                                <ProfileText label={"특징"} value={"공기 정화 식물"} />
+                                <ProfileText
+                                    label={"특징"}
+                                    value={"공기 정화 식물의 대명사! 일주일에 한 번 물만 잘 주면 키우기 너무 편한 식물"}
+                                />
                                 <ProfileText label={"상태"} value={"매우 양호"} />
                             </div>
                         </SwiperSlide>
@@ -86,12 +100,6 @@ export const Carousel = () => {
         </>
     );
 };
-
-const Label = styled.div`
-    font-size: 20px;
-    margin-bottom: 12px;
-    font-family: "Pretendard";
-`;
 
 const BoxDiv = styled.div`
     padding: 12px 12px 40px 12px;
@@ -109,10 +117,10 @@ const CarouselDiv = styled.div`
         margin: 0;
         width: 100%;
         height: 100%;
+        border: 1px solid #d9d9d9;
     }
 
     .swiper-wrapper {
-        border: 1px solid #d9d9d9;
         border-radius: 6px;
         box-sizing: border-box;
         width: 100%;
@@ -142,6 +150,7 @@ const CarouselDiv = styled.div`
         position: absolute;
         bottom: -24px !important;
         display: flex;
+
         justify-content: center;
         align-items: center;
         z-index: 10;
@@ -149,5 +158,13 @@ const CarouselDiv = styled.div`
 
     .custom-pagination .swiper-pagination-bullet-active {
         background-color: black;
+    }
+
+    .plant-info .label {
+        width: 40px;
+    }
+
+    .plant-info .value {
+        padding-left: 10px;
     }
 `;
