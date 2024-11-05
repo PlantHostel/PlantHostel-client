@@ -13,7 +13,8 @@ export default function MainAiSection() {
             <br /> 식물 파트너는 ?
           </div>
           <div className="ai-tip">
-            AI 진단을 통해 여러분에게 꼭 맞는 반려식물을 분양하세요!
+            AI 진단을 통해 여러분에게
+            <br /> 꼭 맞는 반려식물을 분양하세요!
           </div>
         </div>
       </div>
@@ -22,7 +23,6 @@ export default function MainAiSection() {
 }
 
 const AiSection = styled.div`
-  width: 350px;
   height: 150px;
   background-color: #30a766;
   border-radius: 12px;

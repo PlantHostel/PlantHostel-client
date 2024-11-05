@@ -17,17 +17,16 @@ export default function MainReseSection() {
 
 const ReseSection = styled.div`
   display: flex;
-  width: 350px;
-  height: 64px;
   gap: 12px;
   margin-bottom: 20px;
+  justify-content: space-between;
   .rese-option {
+    padding: 17px 12px;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
     width: 169px;
-    height: 64px;
     gap: 12px;
     background-color: rgba(255, 255, 255, 0.15);
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.06);

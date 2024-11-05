@@ -57,6 +57,6 @@ const ButtonComponent = styled.button<{
 ${(props) =>
     props.size === "main" &&
     `
-    width: 310px;
+    width: 326px;
   `}
 `;
