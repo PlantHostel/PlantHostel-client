@@ -1,18 +1,18 @@
 import styled from "styled-components";
 
-interface FooterProps {
+interface AnkleProps {
   text: string;
   href: string;
 }
 
-export const Footer = ({ text, href }: FooterProps) => {
+export const Ankle = ({ text, href }: AnkleProps) => {
   return (
-    <FooterDiv>
+    <AnkleDiv>
       {text} <span>{href}</span>
-    </FooterDiv>
+    </AnkleDiv>
   );
 };
-const FooterDiv = styled.div`
+const AnkleDiv = styled.div`
   display: flex;
   justify-content: center;
   font-size: 13px;

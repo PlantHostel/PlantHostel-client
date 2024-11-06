@@ -7,7 +7,7 @@ import { Input } from "../components/common/Input";
 import { Select } from "../components/common/Select";
 import { Textarea } from "../components/common/Textarea";
 import SelectArrow from "../assets/select-arrow.png";
-import { Footer } from "../components/common/Footer";
+import { Ankle } from "../components/common/Ankle";
 
 export const SignupExtra = () => {
   const data = [
@@ -113,7 +113,7 @@ export const SignupExtra = () => {
         </div>
       </ButtonArea>
 
-      <Footer text="이미 계정이 있으신가요?" href="로그인" />
+      <Ankle text="이미 계정이 있으신가요?" href="로그인" />
     </>
   );
 };

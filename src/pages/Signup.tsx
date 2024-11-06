@@ -3,7 +3,7 @@ import { Header } from "../components/common/Header";
 import { CommonButton } from "../components/common/CommonButton";
 import { IconButton } from "../components/common/IconButton";
 import { Input } from "../components/common/Input";
-import { Footer } from "../components/common/Footer";
+import { Ankle } from "../components/common/Ankle";
 import LeftArrow from "../assets/arrow-left.png";
 import InputLabel from "../components/common/InputLabel";
 import InputBox from "../components/common/InputBox";
@@ -124,7 +124,7 @@ export const Signup = () => {
       <WideButton>
         <CommonButton text={"다음으로"} />
       </WideButton>
-      <Footer text="이미 계정이 있으신가요?" href="로그인" />
+      <Ankle text="이미 계정이 있으신가요?" href="로그인" />
     </>
   );
 };
