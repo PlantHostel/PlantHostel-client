@@ -6,9 +6,10 @@ import MainReseSection from "../components/main/ReseSection";
 import MainAiSection from "../components/main/AiSection";
 import { HeaderLR } from "../components/common/HeaderLR";
 import Title from "../components/common/Title";
-import BastCellCarousel from "../components/main/BestSellCarousel";
+import BestCellCarousel from "../components/main/BestSellCarousel";
 import MagazineCarousel from "../components/main/MagazineCarousel";
 import HostelSection from "../components/main/HostelSection";
+import BestPlantCarousel from "../components/main/BestPlantCarousel";
 
 export const Main = () => {
   return (
@@ -18,8 +19,8 @@ export const Main = () => {
       <MainPlantSection />
       <MainReseSection />
       <MainAiSection />
-      <BastCellCarousel title={"식집사 인기 필수템"} />
-      <BastCellCarousel title={"반려식물 인기종 Top 10"} />
+      <BestCellCarousel />
+      <BestPlantCarousel />
       <MagazineCarousel />
       <HostelSection />
     </MainContainer>

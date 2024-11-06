@@ -24,14 +24,18 @@ const PlantSection = styled.div`
   background-color: rgba(255, 255, 255, 0.15);
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.06);
   .plant-wrap {
+    background: radial-gradient(
+      39.6% 39.6% at 50% 50%,
+      rgba(50, 50, 50, 0.4) 0%,
+      rgba(152, 152, 152, 0.4) 100%
+    );
     width: 326px;
     height: 146px;
-    filter: blur(2px);
-    background-color: gray;
   }
   .plant-script {
+    top: 33%;
     position: absolute;
-    top: 35%;
     color: white;
+    font-family: "Pretendard-SemiBold";
   }
 `;
