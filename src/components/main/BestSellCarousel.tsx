@@ -1,5 +1,5 @@
-import "swiper/css";
-import "swiper/css/pagination";
+// import "swiper/css";
+// import "swiper/css/pagination";
 import styled from "styled-components";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Title from "../common/Title";
