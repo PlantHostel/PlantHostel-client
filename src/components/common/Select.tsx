@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import SelectArrow from "../../assets/select-arrow.png";
 
 interface SelectProps {
     name: string;

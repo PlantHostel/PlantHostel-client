@@ -71,7 +71,6 @@ const LoginContainer = styled.div`
         display: flex;
         align-items: center;
         font-size: 15px;
-        line-height: 22px;
         font-family: "Pretendard-Regular";
     }
 
@@ -80,6 +79,7 @@ const LoginContainer = styled.div`
         cursor: pointer;
         border: 1px solid #dee3e1;
         width: 20px;
+        margin-bottom: 0;
         height: 20px;
         border-radius: 50%;
         background: url(${unchecked}) no-repeat 50% #fafafa;
@@ -97,8 +97,8 @@ const LoginContainer = styled.div`
     }
 
     .login-options .find-account {
-        font-size: 16px;
         font-family: "Pretendard-Regular";
+        font-size: 15px;
     }
 
     .login-options .find-account a {

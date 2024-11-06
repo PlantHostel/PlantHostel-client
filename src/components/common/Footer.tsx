@@ -15,7 +15,8 @@ export const Footer = ({ text, href }: FooterProps) => {
 const FooterDiv = styled.div`
     display: flex;
     justify-content: center;
-    font-size: 14px;
+    font-size: 13px;
+    line-height: 18px;
     font-family: "Pretendard-Regular";
     color: #767676;
     margin: 20px 0px;
@@ -23,9 +24,9 @@ const FooterDiv = styled.div`
     span {
         margin-left: 4px;
         color: #073a29;
-        text-decoration: underline;
         cursor: pointer;
-        font-family: "Pretendard-Medium";
-        font-size: 14px;
+        font-family: "Pretendard-Regular";
+        font-size: 13px;
+        line-height: 18px;
     }
 `;
