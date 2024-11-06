@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import { SocialLoginButton } from "../components/login/SocialLoginButton";
 import unchecked from "../assets/unchecked.png";
 import checked from "../assets/checked.png";
-import { Footer } from "../components/footer";
+import { Footer } from "../components/common/Footer";
 
 export const Login = () => {
     return (
@@ -16,7 +16,13 @@ export const Login = () => {
             <div className="image_section">
                 <img src={getLogoImage()} />
             </div>
-            <Input labelName="ID" type="text" name="userid" id="userid" placeholder="아이디를 입력해주세요" />
+            <Input
+                labelName="ID"
+                type="text"
+                name="userid"
+                id="userid"
+                placeholder="아이디를 입력해주세요"
+            />
             <Input
                 labelName="Password"
                 type="password"
@@ -65,10 +71,12 @@ const LoginContainer = styled.div`
         display: flex;
         align-items: center;
         font-size: 16px;
+        font-family: "Pretendard-Regular";
     }
 
     .login-options .remember-id input {
         appearance: none;
+        cursor: pointer;
         border: 1px solid #dee3e1;
         width: 20px;
         height: 20px;
@@ -83,11 +91,13 @@ const LoginContainer = styled.div`
 
     .login-options .remember-id label {
         margin-left: 5px;
+        cursor: pointer;
         color: #767676;
     }
 
     .login-options .find-account {
         font-size: 16px;
+        font-family: "Pretendard-Regular";
     }
 
     .login-options .find-account a {
@@ -103,6 +113,21 @@ const LoginContainer = styled.div`
         margin-left: 4px;
         color: #767676;
     }
+
+    .sign_in {
+        display: flex;
+        justify-content: center;
+        font-size: 16px;
+        margin-top: 40px;
+    }
+
+    .sign_in span {
+        margin-left: 10px;
+        color: #073a29;
+        text-decoration: underline;
+        cursor: pointer;
+        font-size: 16px;
+    }
 `;
 
 const SocialLoginButtons = styled.div`
@@ -111,11 +136,6 @@ const SocialLoginButtons = styled.div`
     justify-content: center;
     margin-top: 48px;
     margin-bottom: 16px;
+    font-family: "Pretendard-Regular";
     cursor: pointer;
-
-    img {
-        width: 32px;
-        height: 32px;
-        margin: 0px 15px;
-    }
 `;

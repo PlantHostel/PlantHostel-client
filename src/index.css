@@ -9,6 +9,7 @@ body {
 }
 
 #root {
+    font-family: "Pretendard-SemiBold";
     padding: 0px 20px;
     background-color: #f1f3f5;
     max-width: 390px;
@@ -16,5 +17,4 @@ body {
     margin: 0 auto;
     min-height: 100vh;
     height: 100%;
-    box-sizing: border-box;
 }

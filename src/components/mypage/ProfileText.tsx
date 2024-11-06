@@ -15,16 +15,24 @@ export const ProfileText = ({ label, value }: ProfileTextProps) => {
 };
 
 const ProfileTextDiv = styled.div`
+    font-family: "Pretendard-Regular";
+    font-size: 13px;
+    line-height: 18px;
     display: flex;
-    align-items: center;
     margin-bottom: 2px;
 
     .label {
-        width: 80px;
+        width: 50px;
+        white-space: nowrap;
+        padding-right: 10px;
+        font-family: "Pretendard-SemiBold";
+        line-height: 18px;
     }
 
     .value {
+        width: 148px;
+        display: flex;
+        padding-left: 10px;
         color: #5d6762;
-        white-space: nowrap;
     }
 `;

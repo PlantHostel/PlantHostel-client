@@ -40,6 +40,5 @@ const HeaderDiv = styled.header`
         width: 50%;
         font-size: 20px;
         justify-content: center;
-        font-family: "Pretendard";
     }
 `;

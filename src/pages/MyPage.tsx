@@ -7,13 +7,16 @@ import { TwoButton } from "../components/common/TwoButton";
 import { ButtonSection } from "../components/mypage/ButtonSection";
 import styled from "styled-components";
 import { Support } from "../components/mypage/Support";
+import Title from "../components/common/Title";
 
 export const MyPage = () => {
     return (
         <>
             <HeaderLR title={"MY PAGE"} icons={[NotificationImage, CartImage]} />
-            <ProfileBox boxLabel={"프로필"} />
+            <Title title={"프로필"} />
+            <ProfileBox />
             <TwoButton whiteTxt={"반려식물 등록"} greenTxt={"프로필 수정"} />
+            <Title title={"나의 반려식물"} />
             <Carousel />
             <ButtonSection />
             <SupportBox>
@@ -37,5 +40,7 @@ const Logout = styled.div`
     justify-content: center;
     align-items: center;
     text-decoration: underline;
+    font-size: 12px;
+    line-height: 20px;
     color: #9ca3a0;
 `;
