@@ -34,7 +34,7 @@ const ReseSection = styled.div`
   }
 
   .rese-label {
-    font-size: 16px;
     font-family: "Pretendard-SemiBold";
+    font-size: 16px;
   }
 `;

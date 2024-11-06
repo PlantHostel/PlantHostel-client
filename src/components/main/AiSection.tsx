@@ -38,12 +38,12 @@ const AiSection = styled.div`
   }
   .ai-title {
     font-size: 20px;
-    font-family: "Pretendard-SemiBold";
     line-height: 28px;
     margin-bottom: 4px;
   }
   .ai-tip {
     font-size: 14px;
     line-height: 20px;
+    font-family: "Pretendard-Regular";
   }
 `;

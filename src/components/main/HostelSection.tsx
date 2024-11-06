@@ -56,11 +56,11 @@ const HostelSection = styled.div`
   .hostel-title {
     color: #24322b;
     font-size: 20px;
-    font-family: "Pretendard-SemiBold";
     line-height: 28px;
     margin-bottom: 4px;
   }
   .hostel-tip {
     font-size: 14px;
+    font-family: "Pretendard-Regular";
   }
 `;

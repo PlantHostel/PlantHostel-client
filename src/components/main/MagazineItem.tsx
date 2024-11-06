@@ -29,7 +29,6 @@ const ImageWrapper = styled.div`
     line-height: 38px;
     position: absolute;
     color: #f3fbf8;
-    font-family: "Pretendard-SemiBold";
     bottom: 20px;
     left: 20px;
   }

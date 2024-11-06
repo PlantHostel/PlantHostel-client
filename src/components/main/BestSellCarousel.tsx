@@ -66,7 +66,6 @@ const SwiperContainer = styled.div`
 
   .swiper-brand {
     color: #073a29;
-    font-family: "Pretendard-SemiBold";
     margin-bottom: 2px;
   }
 

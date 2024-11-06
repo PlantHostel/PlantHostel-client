@@ -36,6 +36,8 @@ const ItemWrapper = styled.div`
   }
   .swiper-price {
     color: #073a29;
-    font-family: "Pretendard-SemiBold";
+  }
+  .swiper-review-cnt {
+    font-family: "Pretendard-Regular";
   }
 `;
