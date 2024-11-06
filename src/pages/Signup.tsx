@@ -1,82 +1,121 @@
 import styled from "styled-components";
 import { Header } from "../components/common/Header";
-import { Footer } from "../components/footer";
 import { CommonButton } from "../components/common/CommonButton";
 import { IconButton } from "../components/common/IconButton";
+import { Input } from "../components/Input";
+import { Footer } from "../components/Footer";
+import LeftArrow from "../assets/arrow-left.png";
+import InputLabel from "../components/common/InputLabel";
+import InputBox from "../components/common/InputBox";
 
 export const Signup = () => {
     return (
         <>
-            <Header title="회원가입" left={"<"} />
-            <InputSection>
-                <label htmlFor="userid">
-                    <span className="labelName">아이디</span>
-                    <div className="with-button">
-                        <input type="text" name="userid" id="userid" placeholder="아이디를 입력해주세요" />
-                        <CommonButton text="중복확인" />
-                    </div>
-                </label>
-            </InputSection>
-            <InputSection>
-                <label htmlFor="userpw">
-                    <span className="labelName">비밀번호</span>
-                    <input type="password" name="userpw" id="userpw" placeholder="비밀번호를 입력해주세요" />
-                </label>
-            </InputSection>
-            <InputSection>
-                <label htmlFor="userpwCheck">
-                    <span className="labelName">비밀번호 확인</span>
-                    <input
+            <Header title="회원가입" left={<IconButton icon={LeftArrow} alarmColor="red" />} />
+
+            <InputLabel labelName={"아이디"} htmlFor="userid" />
+            <InputBox>
+                <InputSection>
+                    <Input
+                        id="userid"
+                        name="userid"
+                        type="text"
+                        placeholder="아이디를 입력해주세요"
+                    />
+                    <CommonButton text="중복확인" />
+                </InputSection>
+            </InputBox>
+
+            <InputLabel labelName={"비밀번호"} htmlFor="userpw" />
+            <InputBox>
+                <InputSection>
+                    <Input
+                        id="userpw"
+                        name="userpw"
                         type="password"
-                        name="userpwCheck"
-                        id="userpwCheck"
+                        placeholder="비밀번호를 입력해주세요"
+                    />
+                </InputSection>
+            </InputBox>
+
+            <InputLabel labelName={"비밀번호 확인"} htmlFor="userpw-check" />
+            <InputBox>
+                <InputSection>
+                    <Input
+                        id="userpw-check"
+                        name="userpw-check"
+                        type="password"
                         placeholder="비밀번호를 한 번 더 입력해주세요"
                     />
-                </label>
-            </InputSection>
-            <InputSection>
-                <label htmlFor="nickname">
-                    <span className="labelName">닉네임</span>
-                    <input type="text" name="nickname" id="nickname" placeholder="닉네임을 입력해주세요" />
-                </label>
-            </InputSection>
-            <InputSection>
-                <label htmlFor="hp">
-                    <span className="labelName">전화번호</span>
-                    <input type="tel" name="hp" id="hp" placeholder="전화번호를 입력해주세요" />
-                </label>
-            </InputSection>
-            <InputSection>
-                <label htmlFor="email">
-                    <span className="labelName">이메일</span>
-                    <input type="email" name="email" id="email" placeholder="이메일을 입력해주세요" />
-                </label>
-            </InputSection>
-            <InputSection>
-                <label htmlFor="zipcode">
-                    <span className="labelName">우편번호</span>
-                    <div className="with-button">
-                        <input type="text" name="zipcode" id="zipcode" placeholder="우편번호를 입력해주세요" />
-                        <CommonButton text="찾기" />
-                    </div>
-                </label>
-            </InputSection>
-            <InputSection>
-                <label htmlFor="address">
-                    <input type="text" name="address" id="address" placeholder="주소를 입력해주세요" />
-                </label>
-            </InputSection>
-            <InputSection>
-                <label htmlFor="address-detail">
-                    <input
+                </InputSection>
+            </InputBox>
+
+            <InputLabel labelName={"닉네임"} htmlFor="nickname" />
+            <InputBox>
+                <InputSection>
+                    <Input
+                        id="nickname"
+                        name="nickname"
                         type="text"
-                        name="address-detail"
+                        placeholder="닉네임을 입력해주세요"
+                    />
+                </InputSection>
+            </InputBox>
+
+            <InputLabel labelName={"전화번호"} htmlFor="hp" />
+            <InputBox>
+                <InputSection>
+                    <Input id="hp" name="hp" type="tel" placeholder="전화번호를 입력해주세요" />
+                </InputSection>
+            </InputBox>
+
+            <InputLabel labelName={"이메일"} htmlFor="email" />
+            <InputBox>
+                <InputSection>
+                    <Input
+                        id="email"
+                        name="email"
+                        type="email"
+                        placeholder="이메일을 입력해주세요"
+                    />
+                </InputSection>
+            </InputBox>
+
+            <InputLabel labelName={"우편번호"} htmlFor="zipcode" />
+            <InputBox>
+                <InputSection>
+                    <Input
+                        id="zipcode"
+                        name="zipcode"
+                        type="tel"
+                        placeholder="우편번호를 입력해주세요"
+                    />
+                    <CommonButton text={"찾기"} />
+                </InputSection>
+            </InputBox>
+            <InputBox>
+                <InputSection>
+                    <Input
+                        id="address"
+                        name="address"
+                        type="text"
+                        placeholder="주소를 입력해주세요"
+                    />
+                </InputSection>
+            </InputBox>
+            <InputBox>
+                <InputSection>
+                    <Input
                         id="address-detail"
+                        name="address-detail"
+                        type="text"
                         placeholder="상세주소를 입력해주세요"
                     />
-                </label>
-            </InputSection>
-            <CommonButton text={"다음으로"} />
+                </InputSection>
+            </InputBox>
+            <WideButton>
+                <CommonButton text={"다음으로"} />
+            </WideButton>
             <Footer text="이미 계정이 있으신가요?" href="로그인" />
         </>
     );
@@ -84,41 +123,21 @@ export const Signup = () => {
 
 const InputSection = styled.div`
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
 
-    .with-button {
-        display: flex;
-        gap: 8px;
+    button {
+        white-space: nowrap;
+        font-size: 13px;
+        line-height: 18px;
     }
+`;
 
-    .with-button input {
-        width: 80%;
-    }
+const WideButton = styled.div`
+    display: flex;
 
-    .with-button button {
-        display: flex;
-        align-items: center;
-        width: 20%;
-        height: 52px;
-        justify-content: center;
-    }
-
-    label .labelName {
-        display: block;
-        padding: 5px;
-        margin-bottom: 8px;
-    }
-
-    label input {
-        box-sizing: border-box;
-        height: 52px;
-        border: 1px solid #dee3e1;
-        background-color: #f1f3f5;
-        border-radius: 6px;
-        background-color: rgba(255, 255, 255, 0.15);
-        width: 100%;
-        padding: 17px 16px;
-        margin-bottom: 16px;
-        font-size: 16px;
+    button {
+        flex: 1;
     }
 `;

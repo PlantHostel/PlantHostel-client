@@ -4,26 +4,31 @@ import { Button } from "../pages/guide/Button";
 import { MyPage } from "../pages/MyPage";
 import { Signup } from "../pages/Signup";
 import { Main } from "../pages/Main";
+import { SignupExtra } from "../pages/SignupExtra";
 
 export const router = createBrowserRouter([
     {
         path: "login",
-        element: <Login />
+        element: <Login />,
     },
     {
         path: "guide/button",
-        element: <Button />
+        element: <Button />,
     },
     {
         path: "mypage",
-        element: <MyPage />
+        element: <MyPage />,
     },
     {
         path: "signup",
-        element: <Signup />
+        element: <Signup />,
     },
     {
         path: "main",
         element: <Main />,
+    },
+    {
+        path: "signup-ex",
+        element: <SignupExtra />,
     },
 ]);

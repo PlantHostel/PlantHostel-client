@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 interface IconButtonProps {
     icon: string;
-    alarmColor: string;
+    alarmColor?: string;
     count?: number;
 }
 
@@ -18,10 +18,11 @@ export const IconButton = ({ icon, alarmColor, count }: IconButtonProps) => {
 };
 
 const Button = styled.button<{
-    $alarmcolor: string;
+    $alarmcolor?: string;
 }>`
     border: none;
     position: relative;
+    cursor: pointer;
 
     .alarm-count {
         position: absolute;

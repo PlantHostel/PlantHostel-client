@@ -39,6 +39,7 @@ const HeaderDiv = styled.header`
     .header_center {
         width: 50%;
         font-size: 20px;
+        line-height: 28px;
         justify-content: center;
     }
 `;
