@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import PlantImage from "../../assets/plant-image.png";
-import { ProfileText } from "../mypage/ProfileText";
+import { InfoText } from "./InfoText";
 
 export const Carousel = () => {
   return (
@@ -21,19 +21,16 @@ export const Carousel = () => {
                 <img src={PlantImage} alt="" />
               </div>
               <div className="plant-info">
-                <ProfileText label={"이름"} value={"튼튼이"} />
-                <ProfileText
-                  label={"종"}
-                  value={"몬스테라 여인초 올리브나무"}
-                />
-                <ProfileText label={"난이도"} value={"중"} />
-                <ProfileText
+                <InfoText label={"이름"} value={"튼튼이"} />
+                <InfoText label={"종"} value={"몬스테라 여인초 올리브나무"} />
+                <InfoText label={"난이도"} value={"중"} />
+                <InfoText
                   label={"특징"}
                   value={
                     "공기 정화 식물의 대명사! 일주일에 한 번 물만 잘 주면 키우기 너무 편한 식물"
                   }
                 />
-                <ProfileText label={"상태"} value={"매우 양호"} />
+                <InfoText label={"상태"} value={"매우 양호"} />
               </div>
             </SwiperSlide>
             <SwiperSlide>
@@ -41,19 +38,16 @@ export const Carousel = () => {
                 <img src={PlantImage} alt="" />
               </div>
               <div className="plant-info">
-                <ProfileText label={"이름"} value={"튼튼이"} />
-                <ProfileText
-                  label={"종"}
-                  value={"몬스테라 여인초 올리브나무"}
-                />
-                <ProfileText label={"난이도"} value={"중"} />
-                <ProfileText
+                <InfoText label={"이름"} value={"튼튼이"} />
+                <InfoText label={"종"} value={"몬스테라 여인초 올리브나무"} />
+                <InfoText label={"난이도"} value={"중"} />
+                <InfoText
                   label={"특징"}
                   value={
                     "공기 정화 식물의 대명사! 일주일에 한 번 물만 잘 주면 키우기 너무 편한 식물"
                   }
                 />
-                <ProfileText label={"상태"} value={"매우 양호"} />
+                <InfoText label={"상태"} value={"매우 양호"} />
               </div>
             </SwiperSlide>
             <SwiperSlide>
@@ -61,19 +55,16 @@ export const Carousel = () => {
                 <img src={PlantImage} alt="" />
               </div>
               <div className="plant-info">
-                <ProfileText label={"이름"} value={"튼튼이"} />
-                <ProfileText
-                  label={"종"}
-                  value={"몬스테라 여인초 올리브나무"}
-                />
-                <ProfileText label={"난이도"} value={"중"} />
-                <ProfileText
+                <InfoText label={"이름"} value={"튼튼이"} />
+                <InfoText label={"종"} value={"몬스테라 여인초 올리브나무"} />
+                <InfoText label={"난이도"} value={"중"} />
+                <InfoText
                   label={"특징"}
                   value={
                     "공기 정화 식물의 대명사! 일주일에 한 번 물만 잘 주면 키우기 너무 편한 식물"
                   }
                 />
-                <ProfileText label={"상태"} value={"매우 양호"} />
+                <InfoText label={"상태"} value={"매우 양호"} />
               </div>
             </SwiperSlide>
             <SwiperSlide>
@@ -81,19 +72,16 @@ export const Carousel = () => {
                 <img src={PlantImage} alt="" />
               </div>
               <div className="plant-info">
-                <ProfileText label={"이름"} value={"튼튼이"} />
-                <ProfileText
-                  label={"종"}
-                  value={"몬스테라 여인초 올리브나무"}
-                />
-                <ProfileText label={"난이도"} value={"중"} />
-                <ProfileText
+                <InfoText label={"이름"} value={"튼튼이"} />
+                <InfoText label={"종"} value={"몬스테라 여인초 올리브나무"} />
+                <InfoText label={"난이도"} value={"중"} />
+                <InfoText
                   label={"특징"}
                   value={
                     "공기 정화 식물의 대명사! 일주일에 한 번 물만 잘 주면 키우기 너무 편한 식물"
                   }
                 />
-                <ProfileText label={"상태"} value={"매우 양호"} />
+                <InfoText label={"상태"} value={"매우 양호"} />
               </div>
             </SwiperSlide>
             <SwiperSlide>
@@ -101,19 +89,16 @@ export const Carousel = () => {
                 <img src={PlantImage} alt="" />
               </div>
               <div className="plant-info">
-                <ProfileText label={"이름"} value={"튼튼이"} />
-                <ProfileText
-                  label={"종"}
-                  value={"몬스테라 여인초 올리브나무"}
-                />
-                <ProfileText label={"난이도"} value={"중"} />
-                <ProfileText
+                <InfoText label={"이름"} value={"튼튼이"} />
+                <InfoText label={"종"} value={"몬스테라 여인초 올리브나무"} />
+                <InfoText label={"난이도"} value={"중"} />
+                <InfoText
                   label={"특징"}
                   value={
                     "공기 정화 식물의 대명사! 일주일에 한 번 물만 잘 주면 키우기 너무 편한 식물"
                   }
                 />
-                <ProfileText label={"상태"} value={"매우 양호"} />
+                <InfoText label={"상태"} value={"매우 양호"} />
               </div>
             </SwiperSlide>
           </Swiper>
