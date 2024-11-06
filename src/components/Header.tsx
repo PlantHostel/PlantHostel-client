@@ -7,7 +7,7 @@ interface HeaderProps {
     right?: ReactNode;
 }
 
-export const Header = ({ title, left, right }: HeaderProps) => {
+export const Header = ({ title, left = "", right = "" }: HeaderProps) => {
     return (
         <HeaderDiv>
             <div className="header_left">{left}</div>
@@ -40,5 +40,6 @@ const HeaderDiv = styled.header`
         width: 50%;
         font-size: 20px;
         justify-content: center;
+        font-family: "Pretendard";
     }
 `;

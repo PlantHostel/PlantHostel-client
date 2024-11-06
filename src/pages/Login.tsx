@@ -19,15 +19,15 @@ export const Login = () => {
             <Input
                 labelName="ID"
                 type="text"
-                name="userId"
-                id="userId"
+                name="userid"
+                id="userid"
                 placeholder="아이디를 입력해주세요"
             />
             <Input
                 labelName="Password"
                 type="password"
-                name="userPw"
-                id="userPw"
+                name="userpw"
+                id="userpw"
                 placeholder="비밀번호를 입력해주세요"
             />
             <div className="login-options">
@@ -45,7 +45,7 @@ export const Login = () => {
                 <SocialLoginButton text="구글 로그인" type="google" />
             </SocialLoginButtons>
             <CommonButton text={"로그인"} />
-            <Footer text="아직 회원이 아니신가요?" href="회원가입" />
+            <Footer text={"아직 회원이 아니신가요?"} href={"회원가입"} />
         </LoginContainer>
     );
 };
