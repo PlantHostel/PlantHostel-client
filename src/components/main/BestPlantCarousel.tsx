@@ -5,13 +5,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import Title from "../common/Title";
 import MainCarouselItem from "./MainCarouseltem";
 
-export default function BestCellCarousel() {
+export default function BestPlantCarousel() {
   return (
     <SwiperContainer>
-      <div className="title-wrap">
-        <Title title="식집사 인기 필수템" />
-        <span className="title-link ">전체보기</span>
-      </div>
+      <Title title="반려식물 인기종 Top 10" />
       <Swiper spaceBetween={8} slidesPerView={3}>
         <SwiperSlide>
           <MainCarouselItem />
@@ -31,20 +28,6 @@ export default function BestCellCarousel() {
 }
 
 const SwiperContainer = styled.div`
-  .title-wrap {
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
-  }
-
-  .title-link {
-    color: #767676;
-    font-size: 13px;
-    line-height: 18px;
-    margin-top: 30px;
-    margin-bottom: 12px;
-    cursor: pointer;
-  }
   .swiper-slide {
     width: 130px !important;
     display: flex;

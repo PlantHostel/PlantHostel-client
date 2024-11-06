@@ -26,24 +26,24 @@ const AiSection = styled.div`
   height: 150px;
   background-color: #30a766;
   border-radius: 12px;
+  letter-spacing: -2.5%;
   .ai-wrap {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
   }
-  .ai-img {
-  }
   .ai-script {
     color: white;
   }
   .ai-title {
     font-size: 20px;
-    font-weight: bold;
-    line-height: 30px;
+    line-height: 28px;
     margin-bottom: 4px;
   }
   .ai-tip {
     font-size: 14px;
+    line-height: 20px;
+    font-family: "Pretendard-Regular";
   }
 `;

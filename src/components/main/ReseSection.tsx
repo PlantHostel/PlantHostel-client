@@ -19,11 +19,10 @@ const ReseSection = styled.div`
   display: flex;
   gap: 12px;
   margin-bottom: 20px;
-  justify-content: space-between;
   .rese-option {
+    box-sizing: content-box;
     padding: 17px 12px;
     display: flex;
-    justify-content: center;
     align-items: center;
     cursor: pointer;
     width: 169px;
@@ -35,7 +34,7 @@ const ReseSection = styled.div`
   }
 
   .rese-label {
-    font-size: 18px;
-    font-weight: bold;
+    font-family: "Pretendard-SemiBold";
+    font-size: 16px;
   }
 `;

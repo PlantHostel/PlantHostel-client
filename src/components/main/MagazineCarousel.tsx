@@ -42,7 +42,7 @@ const SwiperContainer = styled.div`
 
   .swiper-wrapper {
     display: flex;
-    align-items: end;
+    align-items: center;
   }
 
   .swiper-slide {
