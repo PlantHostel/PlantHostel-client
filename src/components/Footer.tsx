@@ -22,7 +22,6 @@ const FooterDiv = styled.div`
     span {
         margin-left: 10px;
         color: #073a29;
-        text-decoration: underline;
         cursor: pointer;
         font-size: 16px;
     }

@@ -1,35 +1,27 @@
 import styled from "styled-components";
 
 interface InputProps {
-    labelName: string;
     type: string;
     name: string;
     id: string;
     placeholder: string;
 }
 
-export const Input = ({ labelName, type, name, id, placeholder }: InputProps) => {
+export const Input = ({ type, name, id, placeholder }: InputProps) => {
     return (
         <InputSection>
-            <label htmlFor={id}>
-                <span className="labelName">{labelName}</span>
-                <input type={type} name={name} id={id} placeholder={placeholder} />
-            </label>
+            <input type={type} name={name} id={id} placeholder={placeholder} />
         </InputSection>
     );
 };
 
 const InputSection = styled.div`
     display: flex;
-    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    gap: 3px;
 
-    label .labelName {
-        display: block;
-        padding: 5px;
-        margin-bottom: 5px;
-    }
-
-    label input {
+    input {
         box-sizing: border-box;
         height: 52px;
         border: 1px solid #dee3e1;
@@ -38,7 +30,8 @@ const InputSection = styled.div`
         background-color: rgba(255, 255, 255, 0.15);
         width: 100%;
         padding: 17px 20px;
-        margin-bottom: 20px;
-        font-size: 16px;
+        font-family: "Pretendard-Regular";
+        font-size: 15px;
+        line-height: 22px;
     }
 `;

@@ -23,7 +23,7 @@ const ButtonComponent = styled.button<{
     border?: string;
 }>`
     border-radius: 10px;
-    padding: 0 20px;
+    padding: 0 16px;
     font-size: 16px;
     font-family: "Pretendard-SemiBold";
     text-align: center;
@@ -45,8 +45,8 @@ const ButtonComponent = styled.button<{
   `}
 
 ${(props) =>
-    props.size === "main" &&
-    `
+        props.size === "main" &&
+        `
     width: 326px;
   `}
 `;

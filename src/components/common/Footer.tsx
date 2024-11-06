@@ -18,7 +18,7 @@ const FooterDiv = styled.div`
     font-size: 14px;
     font-family: "Pretendard-Regular";
     color: #767676;
-    margin: 30px 0px;
+    margin: 20px 0px;
 
     span {
         margin-left: 4px;

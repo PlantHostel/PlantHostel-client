@@ -8,6 +8,7 @@ import { SocialLoginButton } from "../components/login/SocialLoginButton";
 import unchecked from "../assets/unchecked.png";
 import checked from "../assets/checked.png";
 import { Footer } from "../components/common/Footer";
+import InputLabel from "../components/common/InputLabel";
 
 export const Login = () => {
     return (
@@ -16,15 +17,10 @@ export const Login = () => {
             <div className="image_section">
                 <img src={getLogoImage()} />
             </div>
+            <InputLabel labelName="ID" htmlFor="userid" />
+            <Input type="text" name="userid" id="userid" placeholder="아이디를 입력해주세요" />
+            <InputLabel labelName="Password" htmlFor="userpw" />{" "}
             <Input
-                labelName="ID"
-                type="text"
-                name="userid"
-                id="userid"
-                placeholder="아이디를 입력해주세요"
-            />
-            <Input
-                labelName="Password"
                 type="password"
                 name="userpw"
                 id="userpw"
@@ -55,6 +51,10 @@ const LoginContainer = styled.div`
     flex-direction: column;
     justify-content: center;
 
+    input {
+        margin-bottom: 16px;
+    }
+
     .image_section {
         display: flex;
         justify-content: center;
@@ -70,7 +70,8 @@ const LoginContainer = styled.div`
     .login-options .remember-id {
         display: flex;
         align-items: center;
-        font-size: 16px;
+        font-size: 15px;
+        line-height: 22px;
         font-family: "Pretendard-Regular";
     }
 
