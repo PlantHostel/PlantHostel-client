@@ -1,11 +1,8 @@
-import "swiper/css";
-import "swiper/css/pagination";
 import styled from "styled-components";
 import { Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import PlantImage from "../../assets/plant-image.png";
 import { ProfileText } from "../mypage/ProfileText";
-import Title from "./Title";
 
 export const Carousel = () => {
   return (
