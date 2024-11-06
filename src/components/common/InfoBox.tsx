@@ -3,7 +3,7 @@ import { InfoText } from "./InfoText";
 
 interface InfoBoxProps {
   img: string;
-  data: { label: string; value: string }[];
+  data: { id: number; label: string; value: string }[];
   wordBreak: string;
 }
 
