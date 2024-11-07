@@ -21,7 +21,7 @@ const FooterWrap = styled.div`
   position: sticky;
   bottom: 0;
   z-index: 10;
-  padding: 37px 20px;
+  padding: 20px 37px;
   align-items: center;
   justify-content: space-between;
   border-radius: 32px 32px 0px 0px;
