@@ -5,7 +5,8 @@ import { MyPage } from "../pages/MyPage";
 import { Signup } from "../pages/Signup";
 import { Main } from "../pages/Main";
 import { SignupExtra } from "../pages/SignupExtra";
-import { CheckReservation } from "../pages/CheckReservation";
+import { ReservationDetail } from "../pages/reservation/ReservationDetail";
+import ReservationCheck from "../pages/reservation/ReservationCheck";
 
 export const router = createBrowserRouter([
   {
@@ -33,7 +34,11 @@ export const router = createBrowserRouter([
     element: <SignupExtra />,
   },
   {
+    path: "reservation",
+    element: <ReservationCheck />,
+  },
+  {
     path: "reservation/:id",
-    element: <CheckReservation />,
+    element: <ReservationDetail />,
   },
 ]);

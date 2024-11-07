@@ -3,7 +3,7 @@ import styled from "styled-components";
 interface ProfileTextProps {
   label: string;
   value: string;
-  wordBreak: string;
+  wordBreak?: string;
 }
 
 export const InfoText = ({ label, value, wordBreak }: ProfileTextProps) => {
@@ -21,21 +21,21 @@ const InfoTextDiv = styled.div`
   line-height: 18px;
   display: flex;
   margin-bottom: 2px;
-
   .label {
     width: 50px;
     white-space: nowrap;
     padding-right: 10px;
-    font-family: "Pretendard-SemiBold";
+    font-family: "Pretendard-Regular";
     line-height: 18px;
   }
 
   .value {
     width: 160px;
-    display: flex;
     padding-left: 10px;
     color: #5d6762;
-    white-space: normal;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
   }
 
   .keep-all {
