@@ -1,8 +1,9 @@
 import styled from "styled-components";
+
+import { InfoBox } from "../../common/InfoBox";
+import PlantImage from "../../../assets/info-plant.png";
+import { CommonButton } from "../../common/CommonButton";
 import { ReservationInfoRow } from "./ReservationInfoRow";
-import { InfoBox } from "../common/InfoBox";
-import PlantImage from "../../assets/info-plant.png";
-import { CommonButton } from "../common/CommonButton";
 
 export const ReservationInfo = () => {
   const data = [
