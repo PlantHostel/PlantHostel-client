@@ -3,5 +3,10 @@
   "references": [
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }
-  ]
+  ],
+  "compilerOptions": {
+    /*svg*/
+    "types": ["vite-plugin-svgr/client"]
+  },
+  "include": ["custom.d.ts"]
 }

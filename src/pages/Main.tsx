@@ -13,17 +13,19 @@ import BestPlantCarousel from "../components/main/BestPlantCarousel";
 
 export const Main = () => {
   return (
-    <MainContainer>
-      <HeaderLR title={"PLANT HOSTEL"} icons={[NotificationImage, setting]} />
-      <Title title={"나의 반려식물"} />
-      <MainPlantSection />
-      <MainReseSection />
-      <MainAiSection />
-      <BestCellCarousel />
-      <BestPlantCarousel />
-      <MagazineCarousel />
-      <HostelSection />
-    </MainContainer>
+    <>
+      <MainContainer>
+        <HeaderLR title={"PLANT HOSTEL"} icons={[NotificationImage, setting]} />
+        <Title title={"나의 반려식물"} />
+        <MainPlantSection />
+        <MainReseSection />
+        <MainAiSection />
+        <BestCellCarousel />
+        <BestPlantCarousel />
+        <MagazineCarousel />
+        <HostelSection />
+      </MainContainer>
+    </>
   );
 };
 
