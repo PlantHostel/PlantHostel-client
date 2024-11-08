@@ -7,6 +7,7 @@ import { Main } from "../pages/Main";
 import { SignupExtra } from "../pages/SignupExtra";
 import { ReservationDetail } from "../pages/reservation/ReservationDetail";
 import ReservationCheck from "../pages/reservation/ReservationCheck";
+import { Reservation } from "../pages/Reservation";
 
 export const router = createBrowserRouter([
   {
@@ -40,5 +41,13 @@ export const router = createBrowserRouter([
   {
     path: "reservation/:id",
     element: <ReservationDetail />,
+  },
+  {
+    path: "hospitals/reservation",
+    element: <Reservation type={"hospital"} />,
+  },
+  {
+    path: "hotels/reservation",
+    element: <Reservation type={"hotel"} />,
   },
 ]);

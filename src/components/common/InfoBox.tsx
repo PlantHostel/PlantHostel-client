@@ -4,7 +4,7 @@ import { InfoText } from "./InfoText";
 interface InfoBoxProps {
   img: string;
   data: { id: number; label: string; value: string }[];
-  wordBreak: string;
+  wordBreak?: string;
 }
 
 export const InfoBox = ({ img, data, wordBreak }: InfoBoxProps) => {

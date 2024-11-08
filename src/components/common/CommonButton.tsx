@@ -33,7 +33,7 @@ const ButtonComponent = styled.button<{
   txtColor?: string;
   border?: string;
 }>`
-  border-radius: 10px;
+  border-radius: 6px;
   padding: 0 16px;
   font-size: 16px;
   font-family: "Pretendard-SemiBold";
