@@ -7,6 +7,7 @@ import { Main } from "../pages/Main";
 import { SignupExtra } from "../pages/SignupExtra";
 import { ReservationDetail } from "../pages/reservation/ReservationDetail";
 import ReservationCheck from "../pages/reservation/ReservationCheck";
+import RegistrationPlant from "../pages/RegistrationPlant";
 
 export const router = createBrowserRouter([
   {
@@ -26,7 +27,7 @@ export const router = createBrowserRouter([
     element: <Signup />,
   },
   {
-    path: "main",
+    path: "/",
     element: <Main />,
   },
   {
@@ -40,5 +41,9 @@ export const router = createBrowserRouter([
   {
     path: "reservation/:id",
     element: <ReservationDetail />,
+  },
+  {
+    path: "registration/plant",
+    element: <RegistrationPlant />,
   },
 ]);
