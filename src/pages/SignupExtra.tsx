@@ -6,7 +6,6 @@ import InputBox from "../components/common/InputBox";
 import { Input } from "../components/common/Input";
 import { Select } from "../components/common/Select";
 import { Textarea } from "../components/common/Textarea";
-import SelectArrow from "../assets/select-arrow.png";
 import { Ankle } from "../components/common/Ankle";
 
 export const SignupExtra = () => {
@@ -95,7 +94,6 @@ export const SignupExtra = () => {
             placeholder="대표 반려 식물의 상태를 선택해주세요"
             data={data}
           />
-          <img src={SelectArrow} />
         </InputSection>
       </InputBox>
 
@@ -142,18 +140,9 @@ const ButtonArea = styled.div`
 const InputSection = styled.div`
   display: flex;
   gap: 8px;
-  position: relative;
 
   button {
     white-space: nowrap;
     font-size: 13px;
-  }
-
-  img {
-    width: 12.84px;
-    height: 8px;
-    position: absolute;
-    top: 22px;
-    right: 24px;
   }
 `;

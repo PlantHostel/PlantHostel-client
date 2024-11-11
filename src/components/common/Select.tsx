@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import SelectArrow from "../../assets/select-arrow.png";
 
 interface SelectProps {
   name: string;
@@ -10,6 +11,7 @@ interface SelectProps {
 export const Select = ({ name, id, placeholder, data }: SelectProps) => {
   return (
     <SelectSection>
+
       <select name={name} id={id} required defaultValue="">
         <option style={{ color: "#767676" }} disabled hidden value="">
           {placeholder}
@@ -20,6 +22,7 @@ export const Select = ({ name, id, placeholder, data }: SelectProps) => {
           </option>
         ))}
       </select>
+      <img src={SelectArrow} />
     </SelectSection>
   );
 };
@@ -27,6 +30,7 @@ export const Select = ({ name, id, placeholder, data }: SelectProps) => {
 const SelectSection = styled.div`
   display: flex;
   width: 100%;
+  position: relative;
 
   select {
     display: flex;
@@ -36,7 +40,7 @@ const SelectSection = styled.div`
     height: 52px;
     border: 1px solid #dee3e1;
     background-color: #f1f3f5;
-    border-radius: 12px;
+    border-radius: 6px;
     background-color: rgba(255, 255, 255, 0.15);
     width: 100%;
     padding: 0px 20px;
@@ -47,5 +51,13 @@ const SelectSection = styled.div`
     &:required:invalid {
       color: #767676;
     }
+  }
+  
+  img {
+    width: 12.84px;
+    height: 8px;
+    position: absolute;
+    top: 22px;
+    right: 24px;
   }
 `;
