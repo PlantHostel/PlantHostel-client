@@ -17,6 +17,7 @@ export const BorderHeader = ({ title, left, right }: BorderHeaderProps) => {
 };
 
 const BorderHeaderDiv = styled.div`
+  margin-bottom: 30px;
   header {
     box-shadow: 0px 2px 4px rgba(7, 58, 41, 0.08);
     border-radius: 0px 0px 20px 20px;

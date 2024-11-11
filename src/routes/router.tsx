@@ -7,7 +7,8 @@ import { Main } from "../pages/Main";
 import { SignupExtra } from "../pages/SignupExtra";
 import { ReservationDetail } from "../pages/reservation/ReservationDetail";
 import ReservationCheck from "../pages/reservation/ReservationCheck";
-import { Reservation } from "../pages/Reservation";
+import { Reservation } from "../pages/reservation/Reservation";
+import RegistrationPlant from "../pages/RegistrationPlant";
 
 export const router = createBrowserRouter([
   {
@@ -27,7 +28,7 @@ export const router = createBrowserRouter([
     element: <Signup />,
   },
   {
-    path: "main",
+    path: "/",
     element: <Main />,
   },
   {
@@ -49,5 +50,9 @@ export const router = createBrowserRouter([
   {
     path: "hotels/reservation",
     element: <Reservation type={"hotel"} />,
+  },
+  {
+    path: "registration/plant",
+    element: <RegistrationPlant />,
   },
 ]);

@@ -11,8 +11,9 @@ interface SelectProps {
 export const Select = ({ name, id, placeholder, data }: SelectProps) => {
   return (
     <SelectSection>
-      <select name={name} id={id} required>
-        <option style={{ color: "#767676" }} disabled hidden selected value="">
+
+      <select name={name} id={id} required defaultValue="">
+        <option style={{ color: "#767676" }} disabled hidden value="">
           {placeholder}
         </option>
         {data.map((item) => (
@@ -51,7 +52,7 @@ const SelectSection = styled.div`
       color: #767676;
     }
   }
-
+  
   img {
     width: 12.84px;
     height: 8px;

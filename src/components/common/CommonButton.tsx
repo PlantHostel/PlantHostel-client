@@ -6,6 +6,7 @@ interface ButtonProps {
   txtColor?: string;
   bgColor?: string;
   border?: string;
+  type?: "button" | "submit" | "reset"; // 수정된 부분
 }
 
 export const CommonButton = ({
@@ -14,13 +15,15 @@ export const CommonButton = ({
   bgColor,
   txtColor,
   border,
+  type = "button",
 }: ButtonProps) => {
   return (
     <ButtonComponent
       size={size}
-      bgColor={bgColor}
-      txtColor={txtColor}
+      $bgColor={bgColor}
+      $txtColor={txtColor}
       border={border}
+      type={type}
     >
       {text}
     </ButtonComponent>
@@ -29,8 +32,8 @@ export const CommonButton = ({
 
 const ButtonComponent = styled.button<{
   size?: string;
-  bgColor?: string;
-  txtColor?: string;
+  $bgColor?: string;
+  $txtColor?: string;
   border?: string;
 }>`
   border-radius: 6px;
@@ -42,8 +45,8 @@ const ButtonComponent = styled.button<{
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.06);
   cursor: pointer;
   border: ${(props) => props.border || "none"};
-  background-color: ${(props) => props.bgColor || "#073a29"};
-  color: ${(props) => props.txtColor || "#FFFFFF"};
+  background-color: ${(props) => props.$bgColor || "#073a29"};
+  color: ${(props) => props.$txtColor || "#FFFFFF"};
   ${(props) =>
     props.size === "small" &&
     `
