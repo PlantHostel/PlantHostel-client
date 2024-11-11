@@ -1,20 +1,20 @@
-import { HeaderLR } from "../../components/common/HeaderLR";
-import NotificationImage from "../assets/notification.png";
-import SettingImage from "../assets/setting.png";
-import Title from "../../components/common/Title";
-import { InfoBox } from "../../components/common/InfoBox";
-import ProfileImage from "../assets/profile-image.png";
-import { Search } from "../../components/common/Search";
-import InputLabel from "../../components/common/InputLabel";
-import { Input } from "../../components/common/Input";
-import InputBox from "../../components/common/InputBox";
-import { Select } from "../../components/common/Select";
-import { Textarea } from "../../components/common/Textarea";
+import NotificationImage from "../../assets/notification.png";
+import SettingImage from "../../assets/setting.png";
+import ProfileImage from "../../assets/profile-image.png";
 import Calendar from "react-calendar";
 import styled from "styled-components";
+import unchecked from "../../assets/unchecked.png";
+import checked from "../../assets/checked.png";
+import { HeaderLR } from "../../components/common/HeaderLR";
+import { InfoBox } from "../../components/common/InfoBox";
+import { Search } from "../../components/common/Search";
+import Title from "../../components/common/Title";
+import InputLabel from "../../components/common/InputLabel";
+import InputBox from "../../components/common/InputBox";
+import { Input } from "../../components/common/Input";
+import { Select } from "../../components/common/Select";
+import { Textarea } from "../../components/common/Textarea";
 import { TimeSelect } from "../../components/reservation/TimeSelect";
-import unchecked from "../assets/unchecked.png";
-import checked from "../assets/checked.png";
 import { CommonButton } from "../../components/common/CommonButton";
 
 interface ReservationProps {
@@ -182,7 +182,9 @@ export const Reservation = ({ type }: ReservationProps) => {
         </label>
       </div>
 
-      <CommonButton text="예약하기" />
+      <div className="flex">
+        <CommonButton text="예약하기" />
+      </div>
     </ReservationWrap>
   );
 };
@@ -204,6 +206,15 @@ const ReservationWrap = styled.div`
     display: flex;
     align-items: center;
     margin-bottom: 8px;
+  }
+
+  .flex {
+    display: flex;
+    margin: 8px 0px 16px;
+
+    button {
+      flex: 1;
+    }
   }
 
   .checkbox {
