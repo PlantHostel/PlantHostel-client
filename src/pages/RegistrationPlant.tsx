@@ -56,6 +56,13 @@ export default function RegistrationPlant() {
       value: "2020",
     },
   ];
+
+  function test1(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
+    const data = Object.fromEntries(formData.entries());
+    console.log(data);
+  }
   return (
     <div>
       <BorderHeader
@@ -68,7 +75,7 @@ export default function RegistrationPlant() {
         소중한 반려식물의 정보를 입력해주세요!
       </ResTitle>
 
-      <ResForm>
+      <ResForm onSubmit={test1}>
         <div>
           <InputLabel
             labelName="반려식물의 이름을 입력해주세요"
@@ -146,16 +153,20 @@ export default function RegistrationPlant() {
             ))}
           </SizeOptions>
         </div>
+        <ButtonWrapper>
+          <CommonButton
+            text="취소"
+            size="medium"
+            bgColor="rgba(255, 255, 255, 0.15);"
+            txtColor="#767676"
+          ></CommonButton>
+          <CommonButton
+            text="등록완료"
+            size="medium"
+            type="submit"
+          ></CommonButton>
+        </ButtonWrapper>
       </ResForm>
-      <ButtonWrapper>
-        <CommonButton
-          text="취소"
-          size="medium"
-          bgColor="rgba(255, 255, 255, 0.15);"
-          txtColor="#767676"
-        ></CommonButton>
-        <CommonButton text="등록완료" size="medium"></CommonButton>
-      </ButtonWrapper>
     </div>
   );
 }
@@ -171,7 +182,7 @@ const ResTitle = styled.div`
   }
 `;
 
-const ResForm = styled.div`
+const ResForm = styled.form`
   display: flex;
   gap: 16px;
   flex-direction: column;
