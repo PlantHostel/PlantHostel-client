@@ -1,21 +1,21 @@
-import { HeaderLR } from "../components/common/HeaderLR";
+import { HeaderLR } from "../../components/common/HeaderLR";
 import NotificationImage from "../assets/notification.png";
 import SettingImage from "../assets/setting.png";
-import Title from "../components/common/Title";
-import { InfoBox } from "../components/common/InfoBox";
+import Title from "../../components/common/Title";
+import { InfoBox } from "../../components/common/InfoBox";
 import ProfileImage from "../assets/profile-image.png";
-import { Search } from "../components/common/Search";
-import InputLabel from "../components/common/InputLabel";
-import { Input } from "../components/common/Input";
-import InputBox from "../components/common/InputBox";
-import { Select } from "../components/common/Select";
-import { Textarea } from "../components/common/Textarea";
+import { Search } from "../../components/common/Search";
+import InputLabel from "../../components/common/InputLabel";
+import { Input } from "../../components/common/Input";
+import InputBox from "../../components/common/InputBox";
+import { Select } from "../../components/common/Select";
+import { Textarea } from "../../components/common/Textarea";
 import Calendar from "react-calendar";
 import styled from "styled-components";
-import { TimeSelect } from "../components/reservation/TimeSelect";
+import { TimeSelect } from "../../components/reservation/TimeSelect";
 import unchecked from "../assets/unchecked.png";
 import checked from "../assets/checked.png";
-import { CommonButton } from "../components/common/CommonButton";
+import { CommonButton } from "../../components/common/CommonButton";
 
 interface ReservationProps {
   type: string;
