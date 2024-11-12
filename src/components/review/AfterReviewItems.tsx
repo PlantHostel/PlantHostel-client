@@ -22,7 +22,8 @@ export default function AfterReviewItems() {
       price: 12650,
       deliveryDate: "2024.10.17",
       createdAt: "2024.10.20",
-      content: "디자인이 이쁘고 마음에 들어요. 인테리어에 효과 굿!",
+      content:
+        "디자인이 이쁘고 마음에 들어요. 인테리어에 효과 굿! 지인들 추천으로 구매했다가 새로 하나 더 장만했어요. 화분의 모양 또한 디자인이 독특해서 보는 맛이 나네요. 가격 대비 훌륭한 퀄리티에 더욱이 뿌듯합니다 ^^",
     },
     {
       id: 2,
@@ -39,7 +40,8 @@ export default function AfterReviewItems() {
       price: 12650,
       deliveryDate: "2024.10.17",
       createdAt: "2024.10.20",
-      content: "디자인이 이쁘고 마음에 들어요. 인테리어에 효과 굿!",
+      content:
+        "디자인이 이쁘고 마음에 들어요. 인테리어에 효과 굿! 지인들 추천으로 구매했다가 새로 하나 더 장만했어요. 화분의 모양 또한 디자인이 독특해서 보는 맛이 나네요. 가격 대비 훌륭한 퀄리티에 더욱이 뿌듯합니다 ^^",
     },
     {
       id: 3,
@@ -56,7 +58,8 @@ export default function AfterReviewItems() {
       price: 12650,
       deliveryDate: "2024.10.17",
       createdAt: "2024.10.20",
-      content: "디자인이 이쁘고 마음에 들어요. 인테리어에 효과 굿!",
+      content:
+        "디자인이 이쁘고 마음에 들어요. 인테리어에 효과 굿! 지인들 추천으로 구매했다가 새로 하나 더 장만했어요. 화분의 모양 또한 디자인이 독특해서 보는 맛이 나네요. 가격 대비 훌륭한 퀄리티에 더욱이 뿌듯합니다 ^^",
     },
     {
       id: 4,
@@ -73,7 +76,8 @@ export default function AfterReviewItems() {
       price: 12650,
       deliveryDate: "2024.10.17",
       createdAt: "2024.10.20",
-      content: "디자인이 이쁘고 마음에 들어요. 인테리어에 효과 굿!",
+      content:
+        "디자인이 이쁘고 마음에 들어요. 인테리어에 효과 굿! 지인들 추천으로 구매했다가 새로 하나 더 장만했어요. 화분의 모양 또한 디자인이 독특해서 보는 맛이 나네요. 가격 대비 훌륭한 퀄리티에 더욱이 뿌듯합니다 ^^",
     },
     {
       id: 5,

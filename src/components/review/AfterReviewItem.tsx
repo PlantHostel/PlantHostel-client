@@ -113,6 +113,7 @@ const StyledAccordion = styled.div`
   }
 
   .item-info div:last-child {
+    width: 100%;
     white-space: normal;
   }
 `;
