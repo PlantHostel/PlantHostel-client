@@ -11,6 +11,8 @@ import { Reservation } from "../pages/reservation/Reservation";
 import RegistrationPlant from "../pages/RegistrationPlant";
 import OrderHistory from "../pages/order-history/OrderHistory";
 import { MyReview } from "../pages/MyReview";
+import { EditProfile } from "../pages/EditProfile";
+import { ProfileDetail } from "../pages/ProfileDetail";
 
 export const router = createBrowserRouter([
   {
@@ -25,6 +27,15 @@ export const router = createBrowserRouter([
     path: "mypage",
     element: <MyPage />,
   },
+  {
+    path: "profile/edit",
+    element: <EditProfile />,
+  },
+  {
+    path: "profile",
+    element: <ProfileDetail />,
+  },
+
   {
     path: "signup",
     element: <Signup />,
