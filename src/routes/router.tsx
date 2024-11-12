@@ -9,6 +9,7 @@ import { ReservationDetail } from "../pages/reservation/ReservationDetail";
 import ReservationCheck from "../pages/reservation/ReservationCheck";
 import { Reservation } from "../pages/reservation/Reservation";
 import RegistrationPlant from "../pages/RegistrationPlant";
+import OrderHistory from "../pages/order-history/OrderHistory";
 
 export const router = createBrowserRouter([
   {
@@ -54,5 +55,9 @@ export const router = createBrowserRouter([
   {
     path: "registration/plant",
     element: <RegistrationPlant />,
+  },
+  {
+    path: "order-history",
+    element: <OrderHistory />,
   },
 ]);
