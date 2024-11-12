@@ -1,8 +1,9 @@
+import { ReactNode } from "react";
 import styled from "styled-components";
 
 interface ProfileTextProps {
   label: string;
-  value: string;
+  value: string | number | ReactNode;
   wordBreak?: string;
 }
 

@@ -3,7 +3,7 @@ import { InfoText } from "../common/InfoText";
 import PlantImage from "../../assets/info-plant.png";
 import RightArrow from "../../assets/arrow-right.png";
 
-interface ReviewItemProps {
+interface BeforeReviewItemProps {
   item: {
     id: number;
     productNm: string;
@@ -12,7 +12,7 @@ interface ReviewItemProps {
   };
 }
 
-export const ReviewItem = ({ item }: ReviewItemProps) => {
+export const BeforReviewItem = ({ item }: BeforeReviewItemProps) => {
   return (
     <InfoWrapper>
       <img className="item-img" src={PlantImage} />
