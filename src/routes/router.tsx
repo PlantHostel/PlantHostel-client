@@ -10,6 +10,7 @@ import ReservationCheck from "../pages/reservation/ReservationCheck";
 import { Reservation } from "../pages/reservation/Reservation";
 import RegistrationPlant from "../pages/RegistrationPlant";
 import OrderHistory from "../pages/order-history/OrderHistory";
+import { MyReview } from "../pages/MyReview";
 
 export const router = createBrowserRouter([
   {
@@ -60,4 +61,5 @@ export const router = createBrowserRouter([
     path: "order-history",
     element: <OrderHistory />,
   },
+  { path: "my-review", element: <MyReview /> },
 ]);

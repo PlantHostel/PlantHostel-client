@@ -13,14 +13,17 @@ import ProfileImage from "../assets/profile-image.png";
 export const MyPage = () => {
   const data = [
     {
+      id: 1,
       label: "닉네임",
       value: "ZZU_Hyeon888",
     },
     {
+      id: 2,
       label: "전화번호",
       value: "010.8857.3679",
     },
     {
+      id: 3,
       label: "이메일",
       value: "ssy9989@naver.com",
     },
