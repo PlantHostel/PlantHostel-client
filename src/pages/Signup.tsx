@@ -13,7 +13,7 @@ export const Signup = () => {
     <SignupDiv>
       <Header title="회원가입" left={<IconButton icon={LeftArrow} />} />
 
-      <InputLabel labelName={"아이디"} htmlFor="userid" />
+      <InputLabel labelName={"아이디"} htmlFor="userid" required />
       <InputBox>
         <InputSection>
           <Input
@@ -26,7 +26,7 @@ export const Signup = () => {
         </InputSection>
       </InputBox>
 
-      <InputLabel labelName={"비밀번호"} htmlFor="userpw" />
+      <InputLabel labelName={"비밀번호"} htmlFor="userpw" required />
       <InputBox>
         <InputSection>
           <Input
@@ -38,7 +38,7 @@ export const Signup = () => {
         </InputSection>
       </InputBox>
 
-      <InputLabel labelName={"비밀번호 확인"} htmlFor="userpw-check" />
+      <InputLabel labelName={"비밀번호 확인"} htmlFor="userpw-check" required />
       <InputBox>
         <InputSection>
           <Input
@@ -50,7 +50,7 @@ export const Signup = () => {
         </InputSection>
       </InputBox>
 
-      <InputLabel labelName={"닉네임"} htmlFor="nickname" />
+      <InputLabel labelName={"닉네임"} htmlFor="nickname" required />
       <InputBox>
         <InputSection>
           <Input
@@ -62,7 +62,7 @@ export const Signup = () => {
         </InputSection>
       </InputBox>
 
-      <InputLabel labelName={"전화번호"} htmlFor="hp" />
+      <InputLabel labelName={"전화번호"} htmlFor="hp" required />
       <InputBox>
         <InputSection>
           <Input
@@ -74,7 +74,7 @@ export const Signup = () => {
         </InputSection>
       </InputBox>
 
-      <InputLabel labelName={"이메일"} htmlFor="email" />
+      <InputLabel labelName={"이메일"} htmlFor="email" required />
       <InputBox>
         <InputSection>
           <Input
@@ -86,7 +86,7 @@ export const Signup = () => {
         </InputSection>
       </InputBox>
 
-      <InputLabel labelName={"우편번호"} htmlFor="zipcode" />
+      <InputLabel labelName={"우편번호"} htmlFor="zipcode" required />
       <InputBox>
         <InputSection>
           <Input
@@ -146,6 +146,7 @@ const InputSection = styled.div`
     white-space: nowrap;
     font-size: 13px;
     line-height: 18px;
+    width: 74px;
   }
 `;
 
