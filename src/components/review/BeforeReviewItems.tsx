@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import CommonBox from "../common/CommonBox";
-import { ReviewItem } from "./ReviewItem";
+import { BeforReviewItem } from "./BeforeReviewItem";
 
 export default function BeforeReviewItems() {
   const data = [
@@ -40,7 +40,7 @@ export default function BeforeReviewItems() {
     <ReviewWrapper>
       {data.map((item) => (
         <CommonBox>
-          <ReviewItem key={item.id} item={item} />
+          <BeforReviewItem key={item.id} item={item} />
         </CommonBox>
       ))}
     </ReviewWrapper>
