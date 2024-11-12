@@ -10,11 +10,8 @@ import InputBox from "../components/common/InputBox";
 
 export const Signup = () => {
   return (
-    <>
-      <Header
-        title="회원가입"
-        left={<IconButton icon={LeftArrow} alarmColor="red" />}
-      />
+    <SignupDiv>
+      <Header title="회원가입" left={<IconButton icon={LeftArrow} />} />
 
       <InputLabel labelName={"아이디"} htmlFor="userid" />
       <InputBox>
@@ -125,9 +122,19 @@ export const Signup = () => {
         <CommonButton text={"다음으로"} />
       </WideButton>
       <Ankle text="이미 계정이 있으신가요?" href="로그인" />
-    </>
+    </SignupDiv>
   );
 };
+
+const SignupDiv = styled.div`
+  header {
+    padding: 20px 0px;
+
+    button {
+      padding: 0px;
+    }
+  }
+`;
 
 const InputSection = styled.div`
   display: flex;
