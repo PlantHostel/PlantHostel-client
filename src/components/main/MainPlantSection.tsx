@@ -37,8 +37,8 @@ const PlantSection = styled.div`
       rgba(152, 152, 152, 0.4) 100%
     );
     top: 23px;
+    width: 304px;
     left: 23px;
-    width: 345px;
     height: 165px;
     z-index: 2;
     backdrop-filter: blur(4px);

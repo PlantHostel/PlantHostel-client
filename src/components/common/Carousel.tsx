@@ -29,6 +29,7 @@ export const Carousel = () => {
                   value={
                     "공기 정화 식물의 대명사! 일주일에 한 번 물만 잘 주면 키우기 너무 편한 식물"
                   }
+                  wordBreak="normal"
                 />
                 <InfoText label={"상태"} value={"매우 양호"} />
               </div>

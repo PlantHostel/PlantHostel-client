@@ -1,11 +1,12 @@
 import { HeaderLR } from "../../components/common/HeaderLR";
 import CartImage from "../../assets/cart.png";
+import CarouselImage from "../../assets/carousel-image.png";
 import { Search } from "../../components/common/Search";
 import styled from "styled-components";
 import { ImageCarousel } from "../../components/common/ImageCarousel";
 import { ToggleButton } from "../../components/common/ToggleButton";
 import { ButtonSection } from "../../components/mypage/ButtonSection";
-import { RecommendCarousel } from "../../components/common/store/RecommendCarousel";
+import { ProductCarousel } from "../../components/common/store/ProductCarousel";
 import { ButtonCarousel } from "../../components/common/store/ButtonCarousel";
 import { GridSection } from "../../components/common/store/GridSection";
 import { GridItem } from "../../components/common/store/GridItem";
@@ -78,14 +79,23 @@ export const Store = () => {
     <StoreDiv>
       <HeaderLR title="STORE" icons={icons} />
       <Search placeholder="집사님, 어떤 상품을 찾고 계신가요?" />
-      <ImageCarousel />
+      <ImageCarousel
+        images={[
+          CarouselImage,
+          CarouselImage,
+          CarouselImage,
+          CarouselImage,
+          CarouselImage,
+          CarouselImage,
+        ]}
+      />
       <ToggleButton text1={"식물종류"} text2={"원예상품"} />
       <ButtonSection buttons={buttons} />
       <div className="recommend">
         <span className="nickname">행복한 집사</span>님을 위한 추천 상품
       </div>
       <ButtonCarousel />
-      <RecommendCarousel />
+      <ProductCarousel />
       <GridSection>
         {gridItem.map((item, index) => (
           <GridItem key={index} item={item} />
