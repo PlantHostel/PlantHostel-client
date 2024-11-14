@@ -7,6 +7,7 @@ interface ButtonProps {
   bgColor?: string;
   border?: string;
   type?: "button" | "submit" | "reset"; // 수정된 부분
+  onClick?: () => void;
 }
 
 export const CommonButton = ({
@@ -16,6 +17,7 @@ export const CommonButton = ({
   txtColor,
   border,
   type = "button",
+  onClick,
 }: ButtonProps) => {
   return (
     <ButtonComponent
@@ -24,6 +26,7 @@ export const CommonButton = ({
       $txtColor={txtColor}
       border={border}
       type={type}
+      onClick={onClick}
     >
       {text}
     </ButtonComponent>
@@ -47,6 +50,7 @@ const ButtonComponent = styled.button<{
   border: ${(props) => props.border || "none"};
   background-color: ${(props) => props.$bgColor || "#073a29"};
   color: ${(props) => props.$txtColor || "#FFFFFF"};
+  box-sizing: content-box;
   ${(props) =>
     props.size === "small" &&
     `

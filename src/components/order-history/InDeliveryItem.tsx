@@ -1,9 +1,8 @@
 import styled from "styled-components";
-import { CommonButton } from "../common/CommonButton";
 import PlantImage from "../../assets/Rectangle 178.png";
 type DeliveryProps = {
   item: {
-    id: number;
+    id: string;
     name: string;
     price: string;
     day: string;
@@ -26,22 +25,6 @@ export default function InDeliveryItem({ item }: DeliveryProps) {
           </div>
         </div>
       </InfoWrapper>
-      <ButtonWrapper>
-        <CommonButton
-          text="교환/반품 신청"
-          bgColor="white"
-          txtColor="black"
-          size="reservation"
-        />
-        <CommonButton
-          text="배송 조회"
-          bgColor="white"
-          txtColor="#073A29"
-          border="1px solid #073A29"
-          size="reservation"
-        />
-        <CommonButton text="리뷰 작성" txtColor="white" size="reservation" />
-      </ButtonWrapper>
     </ItemWrapper>
   );
 }
@@ -74,9 +57,4 @@ const InfoWrapper = styled.div`
   .item-delivery {
     color: #767676;
   }
-`;
-
-const ButtonWrapper = styled.div`
-  display: flex;
-  gap: 8px;
 `;
