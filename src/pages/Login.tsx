@@ -1,88 +1,147 @@
 import styled from "styled-components";
-import { Header } from "../components/Header";
-import { getLogoImage, getSocialLoginButton } from "../utils/getImage";
-import { Button } from "../components/Button";
-import { Input } from "../components/Input";
+import { Header } from "../components/common/Header";
+import { getLogoImage } from "../utils/getImage";
+import { CommonButton } from "../components/common/CommonButton";
+import { Input } from "../components/common/Input";
+import { Link } from "react-router-dom";
+import { SocialLoginButton } from "../components/login/SocialLoginButton";
+import unchecked from "../assets/unchecked.png";
+import checked from "../assets/checked.png";
+import { Ankle } from "../components/common/Ankle";
+import InputLabel from "../components/common/InputLabel";
 
 export const Login = () => {
-    return (
-        <LoginContainer>
-            <Header title={"로그인"} />
-            <div className="image_section">
-                <img src={getLogoImage()} />
-            </div>
-            <Input labelName="ID" type="text" name="userId" id="userId" placeholder="아이디를 입력해주세요" />
-            <Input
-                labelName="Password"
-                type="password"
-                name="userPw"
-                id="userPw"
-                placeholder="비밀번호를 입력해주세요"
-            />
-            <span className="orSpan">or</span>
-            <SocialLoginButtons>
-                <div>
-                    <img src={getSocialLoginButton("kakao")} />
-                </div>
-                <div>
-                    <img src={getSocialLoginButton("google")} />
-                </div>
-                <div>
-                    <img src={getSocialLoginButton("naver")} />
-                </div>
-            </SocialLoginButtons>
-            <Button text={"로그인"} />
-            <div className="sign_in">
-                아직 회원이 아니신가요? <span>회원가입</span>
-            </div>
-        </LoginContainer>
-    );
+  return (
+    <LoginContainer>
+      <Header title={"로그인"} />
+      <div className="image_section">
+        <img src={getLogoImage()} />
+      </div>
+      <InputLabel labelName="ID" htmlFor="userid" />
+      <Input
+        type="text"
+        name="userid"
+        id="userid"
+        placeholder="아이디를 입력해주세요"
+      />
+      <InputLabel labelName="Password" htmlFor="userpw" />{" "}
+      <Input
+        type="password"
+        name="userpw"
+        id="userpw"
+        placeholder="비밀번호를 입력해주세요"
+      />
+      <div className="login-options">
+        <div className="remember-id">
+          <input type="checkbox" id="rememberId" />
+          <label htmlFor="rememberId">아이디 저장</label>
+        </div>
+        <div className="find-account">
+          <Link to={""}>아이디/비밀번호 찾기</Link>
+        </div>
+      </div>
+      <SocialLoginButtons>
+        <SocialLoginButton text="카카오 로그인" type="kakao" />
+        <SocialLoginButton text="네이버 로그인" type="naver" />
+        <SocialLoginButton text="구글 로그인" type="google" />
+      </SocialLoginButtons>
+      <CommonButton text={"로그인"} />
+      <Ankle text={"아직 회원이 아니신가요?"} href={"회원가입"} />
+    </LoginContainer>
+  );
 };
 
 const LoginContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  input {
+    margin-bottom: 16px;
+  }
+
+  .image_section {
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    margin-bottom: 30px;
+  }
 
-    .image_section {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 30px;
-    }
+  .login-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-    .orSpan {
-        display: flex;
-        justify-content: center;
-        color: #9ca3a0;
-        margin-top: 36px;
-    }
+  .login-options .remember-id {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-family: "Pretendard-Regular";
+  }
 
-    .sign_in {
-        display: flex;
-        justify-content: center;
-        font-size: 16px;
-    }
+  .login-options .remember-id input {
+    appearance: none;
+    cursor: pointer;
+    border: 1px solid #dee3e1;
+    width: 20px;
+    margin-bottom: 0;
+    height: 20px;
+    border-radius: 50%;
+    background: url(${unchecked}) no-repeat 50% #fafafa;
 
-    .sign_in span {
-        margin-left: 10px;
-        color: #073a29;
-        text-decoration: underline;
-        cursor: pointer;
-        font-size: 16px;
+    &:checked {
+      border: 1px solid #073a29;
+      background: url(${checked}) no-repeat 50% #fafafa;
     }
+  }
+
+  .login-options .remember-id label {
+    margin-left: 5px;
+    cursor: pointer;
+    color: #767676;
+  }
+
+  .login-options .find-account {
+    font-family: "Pretendard-Regular";
+    font-size: 15px;
+  }
+
+  .login-options .find-account a {
+    text-decoration: none;
+  }
+
+  .login-options .find-account a:visited {
+    color: #767676;
+  }
+
+  .login-options .find-account::after {
+    content: ">";
+    margin-left: 4px;
+    color: #767676;
+  }
+
+  .sign_in {
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    margin-top: 40px;
+  }
+
+  .sign_in span {
+    margin-left: 10px;
+    color: #073a29;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 16px;
+  }
 `;
 
 const SocialLoginButtons = styled.div`
-    display: flex;
-    justify-content: center;
-    padding: 20px 0px;
-    margin-top: 36px;
-    margin-bottom: 48px;
-    cursor: pointer;
-
-    img {
-        width: 32px;
-        height: 32px;
-        margin: 0px 15px;
-    }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 48px;
+  margin-bottom: 16px;
+  font-family: "Pretendard-Regular";
+  cursor: pointer;
 `;
