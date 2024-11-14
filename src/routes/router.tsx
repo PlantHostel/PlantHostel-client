@@ -13,6 +13,7 @@ import OrderHistory from "../pages/order-history/OrderHistory";
 import { MyReview } from "../pages/MyReview";
 import { EditProfile } from "../pages/EditProfile";
 import { ProfileDetail } from "../pages/ProfileDetail";
+import { Store } from "../pages/store/Store";
 
 export const router = createBrowserRouter([
   {
@@ -73,4 +74,5 @@ export const router = createBrowserRouter([
     element: <OrderHistory />,
   },
   { path: "my-review", element: <MyReview /> },
+  { path: "store", element: <Store /> },
 ]);

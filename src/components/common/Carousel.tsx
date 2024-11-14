@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Navigation, Pagination } from "swiper/modules";
+import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import PlantImage from "../../assets/plant-image.png";
 import { InfoText } from "./InfoText";
@@ -11,7 +11,7 @@ export const Carousel = () => {
         <CarouselDiv>
           <Swiper
             spaceBetween={50}
-            modules={[Navigation, Pagination]}
+            modules={[Pagination]}
             slidesPerView={1}
             loop={true}
             pagination={{ clickable: true, el: ".custom-pagination" }}

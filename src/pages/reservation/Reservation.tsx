@@ -82,12 +82,14 @@ export const Reservation = ({ type }: ReservationProps) => {
     },
   ];
 
+  const icons = [
+    { image: NotificationImage, alarmColor: "#b71c1c", count: 9 },
+    { image: SettingImage },
+  ];
+
   return (
     <ReservationWrap>
-      <HeaderLR
-        title="PLANT HOSTEL"
-        icons={[NotificationImage, SettingImage]}
-      />
+      <HeaderLR title="PLANT HOSTEL" icons={icons} />
       <Title title={type === "hospital" ? "병원 예약" : "호텔 예약"} />
       <InfoBox img={ProfileImage} data={memberData} />
       <Search placeholder="예약 장소를 선택해주세요" />

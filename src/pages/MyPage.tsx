@@ -29,9 +29,25 @@ export const MyPage = () => {
     },
   ];
 
+  const icons = [
+    { image: NotificationImage, alarmColor: "#b71c1c", count: 9 },
+    { image: CartImage, alarmColor: "#073a29", count: 4 },
+  ];
+
+  const buttons = [
+    { image: "", label: "주문내역" },
+    { image: "", label: "예약내역" },
+    { image: "", label: "내 리뷰" },
+    { image: "", label: "문의내역" },
+    { image: "", label: "찜한상품" },
+    { image: "", label: "최근 본 상품" },
+    { image: "", label: "취소/환불" },
+    { image: "", label: "내 매거진" },
+  ];
+
   return (
     <>
-      <HeaderLR title={"MY PAGE"} icons={[NotificationImage, CartImage]} />
+      <HeaderLR title={"MY PAGE"} icons={icons} />
       <Title title={"프로필"} />
       <InfoBox img={ProfileImage} data={data} wordBreak="keep-all" />
       <ButtonArea>
@@ -40,7 +56,7 @@ export const MyPage = () => {
       </ButtonArea>
       <Title title={"나의 반려식물"} />
       <Carousel />
-      <ButtonSection />
+      <ButtonSection buttons={buttons} />
       <SupportBox>
         <Support label="자주 묻는 질문" href="더 보기" className="button" />
         <Support label="고객센터" href="바로가기" className="button" />
