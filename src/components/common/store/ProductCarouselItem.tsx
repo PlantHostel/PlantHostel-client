@@ -12,7 +12,7 @@ interface ProductItem {
   };
 }
 
-export const RecommendCarouselItem = ({ item }: ProductItem) => {
+export const ProductCarouselItem = ({ item }: ProductItem) => {
   return (
     <ItemDiv>
       <img src={item.image} alt="추천상품 이미지" />

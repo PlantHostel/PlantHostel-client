@@ -1,51 +1,37 @@
 import styled from "styled-components";
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import CarouselImage from "../../assets/carousel-image.png";
 
-export const ImageCarousel = () => {
+interface ImageCarouselProps {
+  images: string[];
+}
+
+export const ImageCarousel = ({ images }: ImageCarouselProps) => {
   return (
-    <>
-      <CarouselDiv>
-        <Swiper
-          spaceBetween={50}
-          modules={[Pagination]}
-          slidesPerView={1}
-          autoplay={true}
-          loop={true}
-          pagination={{ clickable: true }}
-        >
-          <SwiperSlide>
-            <img src={CarouselImage} alt="" />
+    <CarouselDiv>
+      <Swiper
+        spaceBetween={50}
+        modules={[Pagination]}
+        slidesPerView={1}
+        autoplay={{ delay: 3000, disableOnInteraction: false }}
+        loop={true}
+        pagination={{ clickable: true }}
+      >
+        {images.map((image, index) => (
+          <SwiperSlide key={index}>
+            <img src={image} alt="" />
           </SwiperSlide>
-          <SwiperSlide>
-            <img src={CarouselImage} alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={CarouselImage} alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={CarouselImage} alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={CarouselImage} alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={CarouselImage} alt="" />
-          </SwiperSlide>
-        </Swiper>
-      </CarouselDiv>
-    </>
+        ))}
+      </Swiper>
+    </CarouselDiv>
   );
 };
 
 const CarouselDiv = styled.div`
   display: flex;
   flex-direction: column;
-
   .swiper {
-    width: 100%;
-    height: 100%;
+    margin: 0 -20px;
   }
 
   .swiper-pagination-bullet {

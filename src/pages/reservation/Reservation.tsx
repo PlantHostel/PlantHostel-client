@@ -240,6 +240,7 @@ const ReservationWrap = styled.div`
     margin-left: 4px;
     color: #9ca3a0;
     cursor: pointer;
+    white-space: nowrap;
     font-family: "Pretendard-Regular";
   }
 `;

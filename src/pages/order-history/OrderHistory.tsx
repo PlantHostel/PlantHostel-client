@@ -55,15 +55,21 @@ const OrderUser = styled.div`
     font-family: "Pretendard-Regular";
     font-size: 14px;
     padding: 4px 0;
+    justify-content: center;
   }
+
   .delivery-cnt-item {
     display: flex;
     flex-direction: column;
     gap: 8px;
     align-items: center;
-
-    padding: 0 41px;
+    padding: 0px 40px;
   }
+
+  .delivery-cnt-item span {
+    white-space: nowrap;
+  }
+
   .delivery-cnt-item:nth-child(2) {
     border-right: 1px solid #dee3e1;
     border-left: 1px solid #dee3e1;

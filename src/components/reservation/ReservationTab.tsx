@@ -33,6 +33,7 @@ const Tab = styled.div`
   padding: 19px 62px;
   font-size: 14px;
   color: #073a29;
+  white-space: nowrap;
   cursor: pointer;
   &:first-child {
     border-bottom: 2px solid #073a29;

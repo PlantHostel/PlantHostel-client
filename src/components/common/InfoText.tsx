@@ -46,4 +46,9 @@ const InfoTextDiv = styled.div`
   .nowrap {
     white-space: nowrap;
   }
+
+  .normal {
+    white-space: normal;
+    word-break: keep-all;
+  }
 `;
