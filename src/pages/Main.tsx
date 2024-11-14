@@ -12,10 +12,15 @@ import HostelSection from "../components/main/HostelSection";
 import BestPlantCarousel from "../components/main/BestPlantCarousel";
 
 export const Main = () => {
+  const icons = [
+    { image: NotificationImage, alarmColor: "#b71c1c", count: 9 },
+    { image: setting },
+  ];
+
   return (
     <>
       <MainContainer>
-        <HeaderLR title={"PLANT HOSTEL"} icons={[NotificationImage, setting]} />
+        <HeaderLR title={"PLANT HOSTEL"} icons={icons} />
         <Title title={"나의 반려식물"} />
         <MainPlantSection />
         <MainReseSection />
