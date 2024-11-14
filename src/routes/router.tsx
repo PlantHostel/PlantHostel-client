@@ -11,6 +11,9 @@ import { Reservation } from "../pages/reservation/Reservation";
 import RegistrationPlant from "../pages/RegistrationPlant";
 import OrderHistory from "../pages/order-history/OrderHistory";
 import { MyReview } from "../pages/MyReview";
+import { EditProfile } from "../pages/EditProfile";
+import { ProfileDetail } from "../pages/ProfileDetail";
+import { Store } from "../pages/store/Store";
 import ExchangeReturn from "../pages/order-history/ExchangeReturn";
 
 export const router = createBrowserRouter([
@@ -26,6 +29,15 @@ export const router = createBrowserRouter([
     path: "mypage",
     element: <MyPage />,
   },
+  {
+    path: "profile/edit",
+    element: <EditProfile />,
+  },
+  {
+    path: "profile",
+    element: <ProfileDetail />,
+  },
+
   {
     path: "signup",
     element: <Signup />,
@@ -63,5 +75,6 @@ export const router = createBrowserRouter([
     element: <OrderHistory />,
   },
   { path: "my-review", element: <MyReview /> },
+  { path: "store", element: <Store /> },
   { path: "exchange-return", element: <ExchangeReturn /> },
 ]);

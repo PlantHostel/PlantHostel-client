@@ -7,6 +7,7 @@ interface ButtonProps {
   bgColor?: string;
   border?: string;
   type?: "button" | "submit" | "reset"; // 수정된 부분
+  disabled?: boolean; // 버튼 형태만 유지하고 싶을 때 사용
   onClick?: () => void;
 }
 
@@ -17,7 +18,7 @@ export const CommonButton = ({
   txtColor,
   border,
   type = "button",
-  onClick,
+  disabled = false,
 }: ButtonProps) => {
   return (
     <ButtonComponent
@@ -26,7 +27,7 @@ export const CommonButton = ({
       $txtColor={txtColor}
       border={border}
       type={type}
-      onClick={onClick}
+      disabled={disabled}
     >
       {text}
     </ButtonComponent>

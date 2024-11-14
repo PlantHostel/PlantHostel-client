@@ -4,13 +4,29 @@ interface InputProps {
   type: string;
   name: string;
   id: string;
-  placeholder: string;
+  placeholder?: string;
+  value?: string;
+  readOnly?: boolean;
 }
 
-export const Input = ({ type, name, id, placeholder }: InputProps) => {
+export const Input = ({
+  type,
+  name,
+  id,
+  placeholder,
+  value,
+  readOnly,
+}: InputProps) => {
   return (
     <InputSection>
-      <input type={type} name={name} id={id} placeholder={placeholder} />
+      <input
+        type={type}
+        name={name}
+        id={id}
+        placeholder={placeholder}
+        value={value}
+        readOnly={readOnly}
+      />
     </InputSection>
   );
 };

@@ -8,7 +8,11 @@ interface SearchProps {
 export const Search = ({ placeholder }: SearchProps) => {
   return (
     <SearchBox>
-      <SearchInput type="text" placeholder={placeholder}></SearchInput>
+      <SearchInput
+        className="search-input"
+        type="text"
+        placeholder={placeholder}
+      ></SearchInput>
       <SearchIcon src={SearchImage}></SearchIcon>
     </SearchBox>
   );

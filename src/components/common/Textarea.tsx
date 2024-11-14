@@ -2,10 +2,23 @@ import styled from "styled-components";
 
 interface TextareaProps {
   placeholder?: string;
+  value?: string;
+  disabled?: boolean;
 }
 
-export const Textarea = ({ placeholder }: TextareaProps) => {
-  return <TextareaSection placeholder={placeholder}></TextareaSection>;
+export const Textarea = ({
+  placeholder,
+  value,
+  disabled = false,
+}: TextareaProps) => {
+  return (
+    <TextareaSection
+      spellCheck={false}
+      placeholder={placeholder}
+      value={value}
+      disabled={disabled}
+    ></TextareaSection>
+  );
 };
 
 const TextareaSection = styled.textarea`
