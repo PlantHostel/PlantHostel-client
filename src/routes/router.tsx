@@ -14,6 +14,7 @@ import { MyReview } from "../pages/MyReview";
 import { EditProfile } from "../pages/EditProfile";
 import { ProfileDetail } from "../pages/ProfileDetail";
 import { Store } from "../pages/store/Store";
+import ExchangeReturn from "../pages/order-history/ExchangeReturn";
 
 export const router = createBrowserRouter([
   {
@@ -75,4 +76,5 @@ export const router = createBrowserRouter([
   },
   { path: "my-review", element: <MyReview /> },
   { path: "store", element: <Store /> },
+  { path: "exchange-return", element: <ExchangeReturn /> },
 ]);

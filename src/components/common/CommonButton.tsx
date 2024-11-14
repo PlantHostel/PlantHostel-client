@@ -8,6 +8,7 @@ interface ButtonProps {
   border?: string;
   type?: "button" | "submit" | "reset"; // 수정된 부분
   disabled?: boolean; // 버튼 형태만 유지하고 싶을 때 사용
+  onClick?: () => void;
 }
 
 export const CommonButton = ({
@@ -50,6 +51,7 @@ const ButtonComponent = styled.button<{
   border: ${(props) => props.border || "none"};
   background-color: ${(props) => props.$bgColor || "#073a29"};
   color: ${(props) => props.$txtColor || "#FFFFFF"};
+  box-sizing: content-box;
   ${(props) =>
     props.size === "small" &&
     `
