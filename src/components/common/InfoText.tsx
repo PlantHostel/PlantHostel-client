@@ -22,6 +22,7 @@ const InfoTextDiv = styled.div`
   line-height: 18px;
   display: flex;
   margin-bottom: 2px;
+
   .label {
     width: 50px;
     white-space: nowrap;

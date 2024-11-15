@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 import styled from "styled-components";
 
 export default function CommonBox({ children }: { children: ReactNode }) {
-  return <Box>{children}</Box>;
+  return <Box className="box">{children}</Box>;
 }
 
 const Box = styled.div`

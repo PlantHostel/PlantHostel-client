@@ -2,7 +2,6 @@ import { BorderHeader } from "../../components/common/BorderHeader";
 import { IconButton } from "../../components/common/IconButton";
 import ArrowLeft from "../../assets/arrow-left.png";
 import styled from "styled-components";
-import ReviewTab from "../../components/common/store/ReviewTab";
 import { StarRate } from "../../components/common/StarRate";
 import { ReviewItem } from "../../components/common/store/ReviewItem";
 import ReviewImage from "../../assets/review-image.png";

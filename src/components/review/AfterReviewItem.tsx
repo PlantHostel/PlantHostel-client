@@ -28,11 +28,7 @@ export const AfterReviewItem = ({
   return (
     <StyledAccordion>
       <Accordion expanded={expanded} onChange={onClick}>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1a-content"
-          id="panel1a-header"
-        >
+        <AccordionSummary expandIcon={<ExpandMoreIcon />}>
           {!expanded ? (
             <InfoWrapper>
               <img className="item-img" src={item.images[0]} />
@@ -95,26 +91,33 @@ export const AfterReviewItem = ({
 };
 
 const StyledAccordion = styled.div`
+  position: relative;
+
   .MuiPaper-root {
     background: rgba(255, 255, 255, 0.15);
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.06);
   }
 
   .MuiButtonBase-root {
-    padding: 0;
   }
 
   .MuiAccordionSummary-content {
-    margin: 12px;
+    padding: 0px 10px;
   }
 
   .MuiAccordionSummary-content.Mui-expanded {
-    margin-left: 12px;
+    padding: 0;
   }
 
-  .item-info div:last-child {
+  .MuiAccordionDetails-root .item-info div:last-child {
     width: 100%;
     white-space: normal;
+  }
+
+  .MuiAccordionSummary-expandIconWrapper .MuiSvgIcon-root {
+    fill: black;
+    box-sizing: border-box;
+    padding-right: 5px;
   }
 `;
 
@@ -132,13 +135,5 @@ const InfoWrapper = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: end;
-  }
-
-  .arrow-button {
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    right: 12px;
-    top: 50%;
   }
 `;

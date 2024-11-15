@@ -108,13 +108,11 @@ export default function AfterReviewItems() {
   return (
     <ReviewWrapper>
       {data.map((item, index) => (
-        <CommonBox key={item.id}>
-          <AfterReviewItem
-            item={item}
-            expanded={index === expandedIndex}
-            onClick={() => handleAccordionClick(index)}
-          />
-        </CommonBox>
+        <AfterReviewItem
+          item={item}
+          expanded={index === expandedIndex}
+          onClick={() => handleAccordionClick(index)}
+        />
       ))}
     </ReviewWrapper>
   );
