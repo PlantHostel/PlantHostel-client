@@ -3,7 +3,7 @@ import { CommonButton } from "../common/CommonButton";
 import BeforeReviewItems from "./BeforeReviewItems";
 import AfterReviewItems from "./AfterReviewItems";
 
-export default function ReviewTab() {
+export default function MyReviewTab() {
   const tabArr = [
     { name: "작성 전(70)", content: <BeforeReviewItems /> },
     { name: "작성 후(20)", content: <AfterReviewItems /> },
@@ -13,7 +13,7 @@ export default function ReviewTab() {
     <ReviewInfoTab>
       <ButtonSection>
         {tabArr.map((tab, index) => (
-          <CommonButton key={index} text={tab.name} />
+          <CommonButton key={index} text={tab.name} bgColor="#117956" />
         ))}
       </ButtonSection>
       {tabArr[1].content}
@@ -37,7 +37,9 @@ const ButtonSection = styled.div`
     padding: 8px;
     font-size: 12px;
     line-height: 18px;
-    height: 34px;
+    width: 54px;
+    height: 18px;
+    white-space: nowrap;
   }
 
   button:nth-child(2) {

@@ -4,7 +4,7 @@ import CartImage from "../assets/cart.png";
 import { BorderHeader } from "../components/common/BorderHeader";
 import { InfoBox } from "../components/common/InfoBox";
 import ProfileImage from "../assets/profile-image.png";
-import ReviewTab from "../components/review/ReviewTab";
+import MyReviewTab from "../components/review/MyReviewTab";
 
 export const MyReview = () => {
   const data = [
@@ -33,7 +33,7 @@ export const MyReview = () => {
         right={<IconButton icon={CartImage} alarmColor="#073a29" count={4} />}
       />
       <InfoBox img={ProfileImage} data={data} />
-      <ReviewTab />
+      <MyReviewTab />
     </>
   );
 };
