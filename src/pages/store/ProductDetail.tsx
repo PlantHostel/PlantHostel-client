@@ -11,6 +11,9 @@ import ProductDetailImage from "../../assets/product-detail-image1.png";
 import ProductDetailImage2 from "../../assets/product-detail-image2.png";
 import ProductDetailImage3 from "../../assets/product-detail-image3.png";
 import moment from "moment";
+import { SimpleReviewItem } from "../../components/common/store/SimpleReviewItem";
+import { Support } from "../../components/mypage/Support";
+import { CommonButton } from "../../components/common/CommonButton";
 
 export const ProductDetail = () => {
   const icons = [
@@ -33,6 +36,30 @@ export const ProductDetail = () => {
     composition: "식물 1종 + 화분 3종 택 1",
     avgRate: 4.0,
   };
+
+  const reviews = [
+    {
+      writer: "행복***89",
+      rate: 4,
+      content:
+        "최근에 인테리어를 변경하면서 너무 과하지 않게 적당히 화사한 플랜테리어 장식을 하고 싶어서 찾아보다가 구매하게 되었습니다. 가격 대비 너무 좋아요",
+      createdAt: new Date(2024, 7, 29),
+    },
+    {
+      writer: "행복***89",
+      rate: 4,
+      content:
+        "최근에 인테리어를 변경하면서 너무 과하지 않게 적당히 화사한 플랜테리어 장식을 하고 싶어서 찾아보다가 구매하게 되었습니다. 가격 대비 너무 좋아요",
+      createdAt: new Date(2024, 7, 29),
+    },
+    {
+      writer: "행복***89",
+      rate: 4,
+      content:
+        "최근에 인테리어를 변경하면서 너무 과하지 않게 적당히 화사한 플랜테리어 장식을 하고 싶어서 찾아보다가 구매하게 되었습니다. 가격 대비 너무 좋아요",
+      createdAt: new Date(2024, 7, 29),
+    },
+  ];
 
   return (
     <ProductDetailDiv>
@@ -98,9 +125,30 @@ export const ProductDetail = () => {
           <img src={ProductDetailImage3} />
         </div>
       </ProductDetailInfo>
-      <Reviews avgRate={item.avgRate}>
-        <Title title="상품 리뷰" />
+      <Reviews>
+        <div className="review-section">
+          <div className="review">
+            상품 리뷰
+            <span className="avg-rate">({item.avgRate.toFixed(1)})</span>
+          </div>
+          <div className="see-all">전체보기</div>
+        </div>
+        <SimpleReviewItems>
+          {reviews.map((review, index) => (
+            <SimpleReviewItem key={index} review={review} />
+          ))}
+        </SimpleReviewItems>
       </Reviews>
+      <SupportSection>
+        <Support label="상품 문의" className="button" href="자세히 보기" />
+      </SupportSection>
+      <SupportSection>
+        <Support label="판매자 정보" className="button" href="더보기" />
+      </SupportSection>
+      <ButtonSection>
+        <CommonButton bgColor="white" txtColor="#767676" text="장바구니 담기" />
+        <CommonButton text="구매하기" />
+      </ButtonSection>
     </ProductDetailDiv>
   );
 };
@@ -243,4 +291,62 @@ const ProductDetailInfo = styled.div`
 const Reviews = styled.div`
   display: flex;
   flex-direction: column;
+
+  .review-section {
+    margin-top: 24px;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .avg-rate {
+    font-size: 16px;
+    font-family: "Pretendard-Regular";
+  }
+
+  .see-all {
+    font-size: 13px;
+    cursor: pointer;
+    color: #767676;
+    font-family: "Pretendard-Regular";
+  }
+`;
+
+const SimpleReviewItems = styled.div`
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e8e8e8;
+`;
+
+const SupportSection = styled.div`
+  display: flex;
+  align-items: center;
+
+  .support-div {
+    width: 100%;
+    padding: 24px 0px;
+  }
+
+  .label {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .button {
+    color: #073a29;
+    display: flex;
+    justify-content: flex-end;
+  }
+`;
+
+const ButtonSection = styled.div`
+  border-top: 1px solid #e8e8e8;
+  display: flex;
+  padding-top: 48px;
+  padding-bottom: 24px;
+  gap: 12px;
+
+  button {
+    flex: 1;
+  }
 `;
