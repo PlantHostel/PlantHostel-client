@@ -41,7 +41,11 @@ export default function ExchangeReturnStep2() {
                   {item.reasons.map((reason, index) => {
                     return (
                       <div key={index} className="sectino-reason">
-                        <CommonCheckbox id={String(index)} type="circle" />
+                        <CommonCheckbox
+                          id={String(index)}
+                          type="circle"
+                          label="reason"
+                        />
                         <span>{reason}</span>
                       </div>
                     );
