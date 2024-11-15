@@ -3,7 +3,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import styled from "styled-components";
 import { InfoText } from "../common/InfoText";
 import { StarRate } from "../common/StarRate";
-import { AccordionSummaryImage } from "./AccordionSummaryImage";
+import { SummaryImage } from "./SummaryImage";
 
 interface AfterReviewItemProps {
   item: {
@@ -57,7 +57,7 @@ export const AfterReviewItem = ({
             </InfoWrapper>
           ) : (
             <>
-              <AccordionSummaryImage images={item.images} />
+              <SummaryImage images={item.images} />
             </>
           )}
         </AccordionSummary>

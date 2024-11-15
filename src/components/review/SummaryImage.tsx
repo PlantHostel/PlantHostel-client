@@ -1,16 +1,14 @@
 import styled from "styled-components";
 
-interface AccordionSummaryImageProps {
+interface SummaryImageProps {
   images: string[];
 }
 
-export const AccordionSummaryImage = ({
-  images,
-}: AccordionSummaryImageProps) => {
+export const SummaryImage = ({ images }: SummaryImageProps) => {
   const maxVisible = 4;
 
   return (
-    <AccordionSummaryImageDiv>
+    <SummaryImageDiv className="summary-images">
       {images.slice(0, maxVisible).map((src, index) => (
         <img key={index} src={src}></img>
       ))}
@@ -18,11 +16,11 @@ export const AccordionSummaryImage = ({
       {images.length > maxVisible && (
         <div className="extra-image">+{images.length - maxVisible}</div>
       )}
-    </AccordionSummaryImageDiv>
+    </SummaryImageDiv>
   );
 };
 
-const AccordionSummaryImageDiv = styled.div`
+const SummaryImageDiv = styled.div`
   display: flex;
   gap: 8px;
   align-items: flex-end;
