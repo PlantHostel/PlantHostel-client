@@ -1,10 +1,10 @@
-import { IconButton } from "../components/common/IconButton";
-import LeftArrow from "../assets/arrow-left.png";
-import CartImage from "../assets/cart.png";
-import { BorderHeader } from "../components/common/BorderHeader";
-import { InfoBox } from "../components/common/InfoBox";
-import ProfileImage from "../assets/profile-image.png";
-import MyReviewTab from "../components/review/MyReviewTab";
+import { BorderHeader } from "../../components/common/BorderHeader";
+import { IconButton } from "../../components/common/IconButton";
+import { InfoBox } from "../../components/common/InfoBox";
+import MyReviewTab from "../../components/review/MyReviewTab";
+import LeftArrow from "../../assets/arrow-left.png";
+import CartImage from "../../assets/cart.png";
+import ProfileImage from "../../assets/profile-image.png";
 
 export const MyReview = () => {
   const data = [

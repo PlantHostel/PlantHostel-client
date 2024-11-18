@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 interface ProfileTextProps {
   label: string;
-  value: string | number | ReactNode;
+  value: string | number | Date | ReactNode;
   wordBreak?: string;
 }
 
