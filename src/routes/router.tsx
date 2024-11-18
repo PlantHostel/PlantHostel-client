@@ -19,6 +19,7 @@ import { ProductDetail } from "../pages/store/ProductDetail";
 import { Reviews } from "../pages/store/Reviews";
 import { Inquiries } from "../pages/Inquiries";
 import { WriteReview } from "../pages/review/WriteReview";
+import { FindAccount } from "../pages/find-account/FindAccount";
 
 export const router = createBrowserRouter([
   {
@@ -85,4 +86,5 @@ export const router = createBrowserRouter([
   { path: "reviews", element: <Reviews /> },
   { path: "review/write", element: <WriteReview /> },
   { path: "inquries", element: <Inquiries /> },
+  { path: "find-account", element: <FindAccount /> },
 ]);
