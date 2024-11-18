@@ -20,6 +20,7 @@ import { Reviews } from "../pages/store/Reviews";
 import { Inquiries } from "../pages/Inquiries";
 import { WriteReview } from "../pages/review/WriteReview";
 import { FindAccount } from "../pages/find-account/FindAccount";
+import { FindAccountCheck } from "../pages/find-account/FindAccountCheck";
 
 export const router = createBrowserRouter([
   {
@@ -87,4 +88,5 @@ export const router = createBrowserRouter([
   { path: "review/write", element: <WriteReview /> },
   { path: "inquries", element: <Inquiries /> },
   { path: "find-account", element: <FindAccount /> },
+  { path: "find-account/check", element: <FindAccountCheck type="id" /> },
 ]);
