@@ -32,7 +32,7 @@ export const FindIdPw = ({ type, method }: FindIdPwProps) => {
 
   useEffect(() => {
     setIsVisible(false);
-  }, [type]);
+  }, [type, method]);
 
   function clickCertButton() {
     setIsVisible(true);
@@ -178,7 +178,7 @@ export const FindIdPw = ({ type, method }: FindIdPwProps) => {
           )}
         </>
       )}
-      <ButtonSection>
+      <ButtonSection isVisible={isVisible}>
         <CommonButton text="다음" onClick={verifyCode} />
       </ButtonSection>
     </FindIdContainer>
@@ -224,9 +224,11 @@ const InputSection = styled.div`
   }
 `;
 
-const ButtonSection = styled.div`
+const ButtonSection = styled.div<{
+  isVisible: boolean;
+}>`
   display: flex;
-  margin-top: 302px;
+  margin-top: ${(props) => (props.isVisible ? "170px" : "302px")};
 
   button {
     flex: 1;
