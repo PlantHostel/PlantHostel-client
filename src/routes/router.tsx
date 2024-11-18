@@ -21,6 +21,7 @@ import { Inquiries } from "../pages/Inquiries";
 import { WriteReview } from "../pages/review/WriteReview";
 import { FindAccount } from "../pages/find-account/FindAccount";
 import { FindAccountCheck } from "../pages/find-account/FindAccountCheck";
+import { ResetPassword } from "../pages/find-account/ResetPassword";
 
 export const router = createBrowserRouter([
   {
@@ -88,5 +89,6 @@ export const router = createBrowserRouter([
   { path: "review/write", element: <WriteReview /> },
   { path: "inquries", element: <Inquiries /> },
   { path: "find-account", element: <FindAccount /> },
-  { path: "find-account/check", element: <FindAccountCheck type="id" /> },
+  { path: "find-account/check", element: <FindAccountCheck type="password" /> },
+  { path: "find-account/reset-password", element: <ResetPassword /> },
 ]);
