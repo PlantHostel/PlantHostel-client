@@ -5,16 +5,29 @@ type CommonCheckboxProps = {
   id: string;
   type?: string;
   label: string;
+  value?: string;
+  onChange?: (e: React.ChangeEvent) => void;
+  checked?: boolean;
 };
 
 export default function CommonCheckbox({
   id,
   type = "square",
   label,
+  value,
+  onChange,
+  checked,
 }: CommonCheckboxProps) {
   return (
     <StyledCheckbox type={type}>
-      <input type="radio" id={id} name={label} />
+      <input
+        type="radio"
+        id={id}
+        name={label}
+        value={value}
+        onChange={onChange}
+        checked={checked}
+      />
       <label />
     </StyledCheckbox>
   );

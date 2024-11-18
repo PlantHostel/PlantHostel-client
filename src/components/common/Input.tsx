@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 
 interface InputProps {
@@ -7,6 +8,7 @@ interface InputProps {
   placeholder?: string;
   value?: string;
   readOnly?: boolean;
+  onChange?: (e: React.ChangeEvent) => void;
 }
 
 export const Input = ({
@@ -16,6 +18,7 @@ export const Input = ({
   placeholder,
   value,
   readOnly,
+  onChange,
 }: InputProps) => {
   return (
     <InputSection>
@@ -26,6 +29,7 @@ export const Input = ({
         placeholder={placeholder}
         value={value}
         readOnly={readOnly}
+        onChange={onChange}
       />
     </InputSection>
   );

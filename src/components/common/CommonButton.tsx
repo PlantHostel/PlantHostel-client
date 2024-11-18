@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 
 interface ButtonProps {
@@ -8,7 +9,8 @@ interface ButtonProps {
   border?: string;
   type?: "button" | "submit" | "reset"; // 수정된 부분
   disabled?: boolean; // 버튼 형태만 유지하고 싶을 때 사용
-  onClick?: () => void;
+  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  value?: string;
 }
 
 export const CommonButton = ({
@@ -19,6 +21,8 @@ export const CommonButton = ({
   border,
   type = "button",
   disabled = false,
+  value,
+  onClick,
 }: ButtonProps) => {
   return (
     <ButtonComponent
@@ -28,6 +32,8 @@ export const CommonButton = ({
       border={border}
       type={type}
       disabled={disabled}
+      onClick={onClick}
+      value={value}
     >
       {text}
     </ButtonComponent>
