@@ -10,7 +10,7 @@ import ReservationCheck from "../pages/reservation/ReservationCheck";
 import { Reservation } from "../pages/reservation/Reservation";
 import RegistrationPlant from "../pages/RegistrationPlant";
 import OrderHistory from "../pages/order-history/OrderHistory";
-import { MyReview } from "../pages/MyReview";
+import { MyReview } from "../pages/review/MyReview";
 import { EditProfile } from "../pages/EditProfile";
 import { ProfileDetail } from "../pages/ProfileDetail";
 import { Store } from "../pages/store/Store";
@@ -18,6 +18,7 @@ import ExchangeReturn from "../pages/order-history/ExchangeReturn";
 import { ProductDetail } from "../pages/store/ProductDetail";
 import { Reviews } from "../pages/store/Reviews";
 import { Inquiries } from "../pages/Inquiries";
+import { WriteReview } from "../pages/review/WriteReview";
 
 export const router = createBrowserRouter([
   {
@@ -82,5 +83,6 @@ export const router = createBrowserRouter([
   { path: "exchange-return", element: <ExchangeReturn /> },
   { path: "product/:id", element: <ProductDetail /> },
   { path: "reviews", element: <Reviews /> },
+  { path: "review/write", element: <WriteReview /> },
   { path: "inquries", element: <Inquiries /> },
 ]);
