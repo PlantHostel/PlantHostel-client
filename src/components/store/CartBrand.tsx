@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import CommonBox from "../common/CommonBox";
 import { CommonButton } from "../common/CommonButton";
 
 interface CartBrandProps {
@@ -26,6 +25,8 @@ export const CartBrand = ({ shop }: CartBrandProps) => {
 };
 
 const CartBrandContainer = styled.div`
+  border-bottom: 2px solid #e8e8e8;
+
   &:last-child {
     border-bottom: none;
   }
@@ -34,7 +35,6 @@ const CartBrandContainer = styled.div`
     display: flex;
     padding: 12px;
     justify-content: space-between;
-    border-bottom: 2px solid #e8e8e8;
   }
 
   .brand-shop img {

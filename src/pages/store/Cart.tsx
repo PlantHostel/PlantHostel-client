@@ -58,7 +58,7 @@ export const Cart = () => {
   };
 
   return (
-    <CartContainer>
+    <>
       <BorderHeader
         title="찜 내역"
         left={<IconButton icon={ArrowLeft} />}
@@ -72,19 +72,18 @@ export const Cart = () => {
           브랜드 샵(4)
         </div>
       </TabSection>
-      {menu === "상품" &&
-        cartItems.map((item, index) => <CartItem item={item} key={index} />)}
-      <CommonBox>
-        {menu === "브랜드 샵" &&
-          brandShops.map((shop, index) => (
+      {menu === "상품" ? (
+        cartItems.map((item, index) => <CartItem item={item} key={index} />)
+      ) : (
+        <CommonBox>
+          {brandShops.map((shop, index) => (
             <CartBrand shop={shop} key={index} />
           ))}
-      </CommonBox>
-    </CartContainer>
+        </CommonBox>
+      )}
+    </>
   );
 };
-
-const CartContainer = styled.div``;
 
 const TabSection = styled.div<{ menu: string }>`
   display: flex;
