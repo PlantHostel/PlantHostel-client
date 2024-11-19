@@ -23,6 +23,7 @@ import { FindAccount } from "../pages/find-account/FindAccount";
 import { FindAccountCheck } from "../pages/find-account/FindAccountCheck";
 import { ResetPassword } from "../pages/find-account/ResetPassword";
 import { InquiryDetail } from "../pages/inquiry/InquiryDetail";
+import { MyPlants } from "../pages/MyPlants";
 
 export const router = createBrowserRouter([
   {
@@ -93,4 +94,5 @@ export const router = createBrowserRouter([
   { path: "find-account", element: <FindAccount /> },
   { path: "find-account/check", element: <FindAccountCheck type="password" /> },
   { path: "find-account/reset-password", element: <ResetPassword /> },
+  { path: "my-plants", element: <MyPlants /> },
 ]);
