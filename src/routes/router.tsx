@@ -17,11 +17,12 @@ import { Store } from "../pages/store/Store";
 import ExchangeReturn from "../pages/order-history/ExchangeReturn";
 import { ProductDetail } from "../pages/store/ProductDetail";
 import { Reviews } from "../pages/store/Reviews";
-import { Inquiries } from "../pages/Inquiries";
+import { Inquiries } from "../pages/inquiry/Inquiries";
 import { WriteReview } from "../pages/review/WriteReview";
 import { FindAccount } from "../pages/find-account/FindAccount";
 import { FindAccountCheck } from "../pages/find-account/FindAccountCheck";
 import { ResetPassword } from "../pages/find-account/ResetPassword";
+import { InquiryDetail } from "../pages/inquiry/InquiryDetail";
 
 export const router = createBrowserRouter([
   {
@@ -88,6 +89,7 @@ export const router = createBrowserRouter([
   { path: "reviews", element: <Reviews /> },
   { path: "review/write", element: <WriteReview /> },
   { path: "inquries", element: <Inquiries /> },
+  { path: "inquries/:id", element: <InquiryDetail /> },
   { path: "find-account", element: <FindAccount /> },
   { path: "find-account/check", element: <FindAccountCheck type="password" /> },
   { path: "find-account/reset-password", element: <ResetPassword /> },
