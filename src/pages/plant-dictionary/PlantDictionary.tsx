@@ -29,37 +29,37 @@ export const PlantDictionary = () => {
       <ButtonCarousel buttons={buttons} state={{ selected, setSelected }} />
       {selected === 0 ? (
         <>
-          <Title title="다육" />
+          <div className="label-title">다육</div>
           <BestPlants>
             <PlantImageOverlay />
             <PlantImageOverlay />
             <PlantImageOverlay />
           </BestPlants>
-          <Title title="잎" />
+          <div className="label-title">잎</div>
           <BestPlants>
             <PlantImageOverlay />
             <PlantImageOverlay />
             <PlantImageOverlay />
           </BestPlants>
-          <Title title="나무" />
+          <div className="label-title">나무</div>
           <BestPlants>
             <PlantImageOverlay />
             <PlantImageOverlay />
             <PlantImageOverlay />
           </BestPlants>
-          <Title title="꽃" />
+          <div className="label-title">꽃</div>
           <BestPlants>
             <PlantImageOverlay />
             <PlantImageOverlay />
             <PlantImageOverlay />
           </BestPlants>
-          <Title title="채소" />
+          <div className="label-title">채소</div>
           <BestPlants>
             <PlantImageOverlay />
             <PlantImageOverlay />
             <PlantImageOverlay />
           </BestPlants>
-          <Title title="열매" />
+          <div className="label-title">열매</div>
           <BestPlants>
             <PlantImageOverlay />
             <PlantImageOverlay />
@@ -88,12 +88,13 @@ export const PlantDictionary = () => {
 };
 
 const PlantDictionaryContainer = styled.div`
-  .title {
-    font-size: 16px;
-  }
-
   .button-carousel {
     margin-bottom: 24px;
+  }
+
+  .label-title {
+    margin-bottom: 8px;
+    margin-top: 16px;
   }
 `;
 
