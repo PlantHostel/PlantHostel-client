@@ -1,5 +1,5 @@
 import styled from "styled-components";
-interface GridItemProps {
+interface StoreGridItemProps {
   item: {
     image: string;
     isSale: boolean;
@@ -11,9 +11,9 @@ interface GridItemProps {
     soldCount: number;
   };
 }
-export const GridItem = ({ item }: GridItemProps) => {
+export const StoreGridItem = ({ item }: StoreGridItemProps) => {
   return (
-    <GridItemDiv>
+    <StoreGridItemDiv>
       <img src={item.image} />
       <div className="price-section">
         {item.isSale && <span className="sale">{item.saleRate}</span>}
@@ -25,11 +25,11 @@ export const GridItem = ({ item }: GridItemProps) => {
       </div>
       <div className="product-detail">{item.content}</div>
       <span className="sold-count">{item.soldCount}개 구매</span>
-    </GridItemDiv>
+    </StoreGridItemDiv>
   );
 };
 
-const GridItemDiv = styled.div`
+const StoreGridItemDiv = styled.div`
   display: flex;
   flex-direction: column;
   width: 170px;

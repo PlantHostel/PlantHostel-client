@@ -27,6 +27,7 @@ export const Main = () => {
         <MainAiSection />
         <BestCellCarousel />
         <BestPlantCarousel />
+        <Title title="플랜트 매거진" />
         <MagazineCarousel />
         <HostelSection />
       </MainContainer>

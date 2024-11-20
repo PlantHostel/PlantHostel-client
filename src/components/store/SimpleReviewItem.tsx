@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import ReviewImage from "../../../assets/review-image.png";
-import { StarRate } from "../StarRate";
+import ReviewImage from "../../assets/review-image.png";
+import { StarRate } from "../common/StarRate";
 import moment from "moment";
 
 interface SimpleReviewItemProps {

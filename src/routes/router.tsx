@@ -25,6 +25,7 @@ import { ResetPassword } from "../pages/find-account/ResetPassword";
 import { InquiryDetail } from "../pages/inquiry/InquiryDetail";
 import { MyPlants } from "../pages/MyPlants";
 import { Cart } from "../pages/store/Cart";
+import { Magazine } from "../pages/magazine/Magazine";
 
 export const router = createBrowserRouter([
   {
@@ -97,4 +98,5 @@ export const router = createBrowserRouter([
   { path: "find-account/reset-password", element: <ResetPassword /> },
   { path: "my-plants", element: <MyPlants /> },
   { path: "cart", element: <Cart /> },
+  { path: "magazine", element: <Magazine /> },
 ]);

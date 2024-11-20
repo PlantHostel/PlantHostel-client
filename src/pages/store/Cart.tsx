@@ -5,10 +5,10 @@ import CartImage from "../../assets/cart.png";
 import { IconButton } from "../../components/common/IconButton";
 import { useState } from "react";
 import PlantImage from "../../assets/info-plant.png";
-import { CartItem } from "../../components/store/CartItem";
 import ReviewImage from "../../assets/review-image.png";
-import { CartBrand } from "../../components/store/CartBrand";
 import CommonBox from "../../components/common/CommonBox";
+import { CartBrand } from "../../components/store/CartBrand";
+import { CartItem } from "../../components/store/CartItem";
 
 export const Cart = () => {
   const cartItems = [

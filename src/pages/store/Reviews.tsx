@@ -3,7 +3,7 @@ import { IconButton } from "../../components/common/IconButton";
 import ArrowLeft from "../../assets/arrow-left.png";
 import styled from "styled-components";
 import { StarRate } from "../../components/common/StarRate";
-import { ReviewItem } from "../../components/common/store/ReviewItem";
+import { ReviewItem } from "../../components/store/ReviewItem";
 import ReviewImage from "../../assets/review-image.png";
 import { CommonButton } from "../../components/common/CommonButton";
 
