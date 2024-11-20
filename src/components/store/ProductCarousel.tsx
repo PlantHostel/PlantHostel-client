@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { ProductCarouselItem } from "./ProductCarouselItem";
-import RecommendImage1 from "../../../assets/recommnend-image1.png";
-import RecommendImage2 from "../../../assets/recommnend-image2.png";
-import RecommendImage3 from "../../../assets/recommnend-image3.png";
+import RecommendImage1 from "../../assets/recommnend-image1.png";
+import RecommendImage2 from "../../assets/recommnend-image2.png";
+import RecommendImage3 from "../../assets/recommnend-image3.png";
 
 export const ProductCarousel = () => {
   const productItem = [

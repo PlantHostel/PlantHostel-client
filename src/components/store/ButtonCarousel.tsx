@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { CommonButton } from "../CommonButton";
+import { CommonButton } from "../common/CommonButton";
 
 export const ButtonCarousel = () => {
   return (

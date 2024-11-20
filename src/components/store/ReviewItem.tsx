@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import ProfileImage from "../../../assets/profile-image.png";
-import { StarRate } from "../StarRate";
-import MoreCircle from "../../../assets/more-circle.png";
+import ProfileImage from "../../assets/profile-image.png";
+import { StarRate } from "../common/StarRate";
+import MoreCircle from "../../assets/more-circle.png";
 import moment from "moment";
-import { SummaryImage } from "../../review/SummaryImage";
+import { SummaryImage } from "../review/SummaryImage";
 
 interface ReviewItemProps {
   review: {

@@ -11,11 +11,10 @@ import MagazineItem from "./MagazineItem";
 export default function MagazineCarousel() {
   return (
     <SwiperContainer>
-      <Title title="플랜트 매거진" />
       <Swiper
         slidesPerView={1.2}
         centeredSlides={true}
-        spaceBetween={12}
+        spaceBetween={16}
         initialSlide={1}
       >
         <SwiperSlide>
@@ -52,7 +51,7 @@ const SwiperContainer = styled.div`
     transition: height 0.3s ease;
   }
   .swiper-slide.swiper-slide-active {
-    width: 326px !important;
+    width: 291px !important;
     height: 327px;
   }
 `;

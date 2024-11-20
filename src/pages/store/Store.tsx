@@ -6,10 +6,10 @@ import styled from "styled-components";
 import { ImageCarousel } from "../../components/common/ImageCarousel";
 import { ToggleButton } from "../../components/common/ToggleButton";
 import { ButtonSection } from "../../components/mypage/ButtonSection";
-import { ProductCarousel } from "../../components/common/store/ProductCarousel";
-import { ButtonCarousel } from "../../components/common/store/ButtonCarousel";
-import { GridSection } from "../../components/common/store/GridSection";
-import { GridItem } from "../../components/common/store/GridItem";
+import { ProductCarousel } from "../../components/store/ProductCarousel";
+import { ButtonCarousel } from "../../components/store/ButtonCarousel";
+import { GridSection } from "../../components/common/GridSection";
+import { StoreGridItem } from "../../components/store/StoreGridItem";
 import GridImage1 from "../../assets/grid-image1.png";
 import GridImage2 from "../../assets/grid-image2.png";
 import GridImage3 from "../../assets/grid-image3.png";
@@ -98,7 +98,7 @@ export const Store = () => {
       <ProductCarousel />
       <GridSection>
         {gridItem.map((item, index) => (
-          <GridItem key={index} item={item} />
+          <StoreGridItem key={index} item={item} />
         ))}
       </GridSection>
     </StoreDiv>

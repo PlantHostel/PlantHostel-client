@@ -5,13 +5,13 @@ import { ImageCarousel } from "../../components/common/ImageCarousel";
 import PlantImage from "../../assets/store-plant-image.png";
 import { StarRate } from "../../components/common/StarRate";
 import Title from "../../components/common/Title";
-import { ProductCarousel } from "../../components/common/store/ProductCarousel";
+import { ProductCarousel } from "../../components/store/ProductCarousel";
 import { InfoText } from "../../components/common/InfoText";
 import ProductDetailImage from "../../assets/product-detail-image1.png";
 import ProductDetailImage2 from "../../assets/product-detail-image2.png";
 import ProductDetailImage3 from "../../assets/product-detail-image3.png";
 import moment from "moment";
-import { SimpleReviewItem } from "../../components/common/store/SimpleReviewItem";
+import { SimpleReviewItem } from "../../components/store/SimpleReviewItem";
 import { Support } from "../../components/mypage/Support";
 import { CommonButton } from "../../components/common/CommonButton";
 
