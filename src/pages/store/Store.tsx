@@ -7,7 +7,7 @@ import { ImageCarousel } from "../../components/common/ImageCarousel";
 import { ToggleButton } from "../../components/common/ToggleButton";
 import { ButtonSection } from "../../components/mypage/ButtonSection";
 import { ProductCarousel } from "../../components/store/ProductCarousel";
-import { ButtonCarousel } from "../../components/store/ButtonCarousel";
+import { ButtonCarousel } from "../../components/common/ButtonCarousel";
 import { GridSection } from "../../components/common/GridSection";
 import { StoreGridItem } from "../../components/store/StoreGridItem";
 import GridImage1 from "../../assets/grid-image1.png";
@@ -75,6 +75,16 @@ export const Store = () => {
     },
   ];
 
+  const carouselButtons = [
+    { text: "생화" },
+    { text: "조화" },
+    { text: "가드닝" },
+    { text: "정원용" },
+    { text: "데코용" },
+    { text: "인테리어" },
+    { text: "원예식물" },
+  ];
+
   return (
     <StoreDiv>
       <HeaderLR title="STORE" icons={icons} />
@@ -94,7 +104,7 @@ export const Store = () => {
       <div className="recommend">
         <span className="nickname">행복한 집사</span>님을 위한 추천 상품
       </div>
-      <ButtonCarousel />
+      <ButtonCarousel buttons={carouselButtons} />
       <ProductCarousel />
       <GridSection>
         {gridItem.map((item, index) => (
