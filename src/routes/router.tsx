@@ -28,6 +28,7 @@ import { Cart } from "../pages/store/Cart";
 import { Magazine } from "../pages/magazine/Magazine";
 import { MagazineDetail } from "../pages/magazine/MagazineDetail";
 import { PlantDictionary } from "../pages/plant-dictionary/PlantDictionary";
+import { WriteMagazine } from "../pages/magazine/WriteMagazine";
 
 export const router = createBrowserRouter([
   {
@@ -103,4 +104,5 @@ export const router = createBrowserRouter([
   { path: "magazine", element: <Magazine /> },
   { path: "magazine/:id", element: <MagazineDetail /> },
   { path: "plant-dictionary", element: <PlantDictionary /> },
+  { path: "magazine/write", element: <WriteMagazine /> },
 ]);

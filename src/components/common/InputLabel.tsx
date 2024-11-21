@@ -35,5 +35,6 @@ const Label = styled.div`
     margin-left: 8px;
     color: #b71c1c;
     font-size: 12px;
+    font-family: "Pretendard-Regular";
   }
 `;

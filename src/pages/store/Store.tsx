@@ -13,6 +13,7 @@ import { StoreGridItem } from "../../components/store/StoreGridItem";
 import GridImage1 from "../../assets/grid-image1.png";
 import GridImage2 from "../../assets/grid-image2.png";
 import GridImage3 from "../../assets/grid-image3.png";
+import { useState } from "react";
 
 export const Store = () => {
   const icons = [
@@ -85,6 +86,8 @@ export const Store = () => {
     { text: "원예식물" },
   ];
 
+  const [selected, setSelected] = useState(0);
+
   return (
     <StoreDiv>
       <HeaderLR title="STORE" icons={icons} />
@@ -104,7 +107,10 @@ export const Store = () => {
       <div className="recommend">
         <span className="nickname">행복한 집사</span>님을 위한 추천 상품
       </div>
-      <ButtonCarousel buttons={carouselButtons} />
+      <ButtonCarousel
+        buttons={carouselButtons}
+        state={{ selected, setSelected }}
+      />
       <ProductCarousel />
       <GridSection>
         {gridItem.map((item, index) => (
