@@ -9,6 +9,7 @@ import { Select } from "../components/common/Select";
 import Camera from "../assets/Camera.png";
 import Plus from "../assets/Plus.png";
 import Search from "../assets/Search.png";
+import { InsertImage } from "../components/common/InsertImage";
 
 export default function RegistrationPlant() {
   const sizeData = [
@@ -91,12 +92,7 @@ export default function RegistrationPlant() {
         <div>
           <InputLabel labelName="반려식물의 사진을 등록해주세요" />
           <ImageSection>
-            <div className="img-wrapper">
-              <img src={Camera} alt="camera" />
-              <div className="plus">
-                <img src={Plus} alt="plus" />
-              </div>
-            </div>
+            <InsertImage type="circle" />
           </ImageSection>
         </div>
         <div>
