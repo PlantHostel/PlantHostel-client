@@ -9,6 +9,7 @@ import unchecked from "../assets/unchecked.png";
 import checked from "../assets/checked.png";
 import { Ankle } from "../components/common/Ankle";
 import InputLabel from "../components/common/InputLabel";
+import InputBox from "../components/common/InputBox";
 
 export const Login = () => {
   return (
@@ -18,19 +19,23 @@ export const Login = () => {
         <img src={getLogoImage()} />
       </div>
       <InputLabel labelName="ID" htmlFor="userid" />
-      <Input
-        type="text"
-        name="userid"
-        id="userid"
-        placeholder="아이디를 입력해주세요"
-      />
-      <InputLabel labelName="Password" htmlFor="userpw" />{" "}
-      <Input
-        type="password"
-        name="userpw"
-        id="userpw"
-        placeholder="비밀번호를 입력해주세요"
-      />
+      <InputBox>
+        <Input
+          type="text"
+          name="userid"
+          id="userid"
+          placeholder="아이디를 입력해주세요"
+        />
+      </InputBox>
+      <InputLabel labelName="Password" htmlFor="userpw" />
+      <InputBox>
+        <Input
+          type="password"
+          name="userpw"
+          id="userpw"
+          placeholder="비밀번호를 입력해주세요"
+        />
+      </InputBox>
       <div className="login-options">
         <div className="remember-id">
           <input type="checkbox" id="rememberId" />
@@ -55,10 +60,6 @@ const LoginContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-  input {
-    margin-bottom: 16px;
-  }
 
   .image_section {
     display: flex;
