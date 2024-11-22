@@ -4,38 +4,14 @@ import { CommonButton } from "../../components/common/CommonButton";
 import InputLabel from "../../components/common/InputLabel";
 import { Input } from "../../components/common/Input";
 import InputBox from "../../components/common/InputBox";
-import Show from "../../assets/Show.png";
-import Hide from "../../assets/Hide.png";
-import React, { useEffect, useState } from "react";
 import { IconButton } from "../../components/common/IconButton";
 import LeftArrow from "../../assets/arrow-left.png";
+import { InputError } from "../../components/common/InputError";
+import { usePasswordCheck } from "../../hooks/usePasswordCheck";
 
 export const ResetPassword = () => {
-  const [pwMasking, setPwMasking] = useState(true);
-  const [pwCheckMasking, setPwCheckMasking] = useState(true);
-  const [userpw, setUserpw] = useState("");
-  const [userpwCheck, setUserpwCheck] = useState("");
-  const [isEqual, setIsEqual] = useState(true);
-
-  function changeUserpw(e: React.ChangeEvent) {
-    const { value } = e.target as HTMLInputElement;
-
-    setUserpw(value);
-  }
-
-  function changeUserpwCheck(e: React.ChangeEvent) {
-    const { value } = e.target as HTMLInputElement;
-
-    setUserpwCheck(value);
-  }
-
-  useEffect(() => {
-    if (userpw !== userpwCheck) {
-      setIsEqual(false);
-    } else {
-      setIsEqual(true);
-    }
-  }, [userpw, userpwCheck]);
+  const { userpw, userpwCheck, isEqual, changeUserpw, changeUserpwCheck } =
+    usePasswordCheck();
 
   return (
     <ResetPasswordContainer isEqual={isEqual}>
@@ -56,14 +32,9 @@ export const ResetPassword = () => {
           <Input
             id="userpw"
             name="userpw"
-            type={pwMasking ? "password" : "text"}
+            type="password"
             value={userpw}
             onChange={changeUserpw}
-          />
-          <img
-            src={pwMasking ? Hide : Show}
-            className="show-password"
-            onClick={() => setPwMasking((prev) => !prev)}
           />
         </InputBox>
         <InputLabel labelName="비밀번호 확인" htmlFor="userpw-check" />
@@ -71,19 +42,12 @@ export const ResetPassword = () => {
           <Input
             id="userpw-check"
             name="userpw-check"
-            type={pwCheckMasking ? "password" : "text"}
+            type="password"
             value={userpwCheck}
             onChange={changeUserpwCheck}
           />
-          <img
-            src={pwCheckMasking ? Hide : Show}
-            className="show-password"
-            onClick={() => setPwCheckMasking((prev) => !prev)}
-          />
         </InputBox>
-        {!isEqual && (
-          <div className="different">비밀번호가 일치하지 않습니다.</div>
-        )}
+        {!isEqual && <InputError />}
       </div>
       <ButtonSection>
         <CommonButton text="완료" />

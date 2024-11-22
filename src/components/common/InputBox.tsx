@@ -11,4 +11,5 @@ export default function InputBox({ children }: InputBoxProps) {
 
 const InputBoxDiv = styled.div`
   margin-bottom: 16px;
+  position: relative;
 `;

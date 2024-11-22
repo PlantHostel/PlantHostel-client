@@ -7,8 +7,58 @@ import { Ankle } from "../components/common/Ankle";
 import LeftArrow from "../assets/arrow-left.png";
 import InputLabel from "../components/common/InputLabel";
 import InputBox from "../components/common/InputBox";
+import { InputError } from "../components/common/InputError";
+import { usePasswordCheck } from "../hooks/usePasswordCheck";
+import { useEffect, useState } from "react";
+import { CertCode } from "../components/common/CertCode";
 
 export const Signup = () => {
+  const { userpw, userpwCheck, isEqual, changeUserpw, changeUserpwCheck } =
+    usePasswordCheck();
+
+  const [userid, setUserid] = useState("");
+  const [isDup, setIsDup] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const [timeLeft, setTimeLeft] = useState(180);
+
+  useEffect(() => {
+    let timer: number = 0;
+
+    if (isVisible && timeLeft > 0) {
+      timer = setInterval(() => {
+        setTimeLeft((prev) => prev - 1);
+      }, 1000);
+    } else if (timeLeft === 0) {
+      clearInterval(timer);
+      setIsVisible(false);
+    }
+
+    return () => clearInterval(timer);
+  }, [isVisible, timeLeft]);
+
+  useEffect(() => {
+    setIsVisible(false);
+  }, []);
+
+  function clickCertButton() {
+    setIsVisible(true);
+    setTimeLeft(180);
+  }
+
+  function changeUserid(e: React.ChangeEvent) {
+    const { value } = e.target as HTMLInputElement;
+
+    setUserid(value);
+  }
+
+  function verifyId() {
+    if (userid === "admin") {
+      setIsDup(true);
+    } else {
+      setIsDup(false);
+    }
+  }
+
   return (
     <SignupDiv>
       <Header title="회원가입" left={<IconButton icon={LeftArrow} />} />
@@ -20,10 +70,16 @@ export const Signup = () => {
             id="userid"
             name="userid"
             type="text"
+            value={userid}
             placeholder="아이디를 입력해주세요"
+            isError={isDup}
+            onChange={changeUserid}
           />
-          <CommonButton text="중복확인" />
+          <CommonButton text="중복확인" onClick={verifyId} />
         </InputSection>
+        {isDup && (
+          <InputError text="존재하는 아이디입니다. 다른 아이디를 이용해주세요." />
+        )}
       </InputBox>
 
       <InputLabel labelName={"비밀번호"} htmlFor="userpw" required />
@@ -33,7 +89,9 @@ export const Signup = () => {
             id="userpw"
             name="userpw"
             type="password"
+            value={userpw}
             placeholder="비밀번호를 입력해주세요"
+            onChange={changeUserpw}
           />
         </InputSection>
       </InputBox>
@@ -45,11 +103,14 @@ export const Signup = () => {
             id="userpw-check"
             name="userpw-check"
             type="password"
+            value={userpwCheck}
             placeholder="비밀번호를 한 번 더 입력해주세요"
+            isError={!isEqual}
+            onChange={changeUserpwCheck}
           />
         </InputSection>
+        {!isEqual && <InputError text="비밀번호가 일치하지 않습니다." />}
       </InputBox>
-
       <InputLabel labelName={"닉네임"} htmlFor="nickname" required />
       <InputBox>
         <InputSection>
@@ -71,9 +132,13 @@ export const Signup = () => {
             type="tel"
             placeholder="전화번호를 입력해주세요"
           />
+          <CommonButton
+            text={isVisible ? "재전송" : "인증번호"}
+            onClick={clickCertButton}
+          />
         </InputSection>
       </InputBox>
-
+      {isVisible && <CertCode visibleState={{ isVisible, setIsVisible }} />}
       <InputLabel labelName={"이메일"} htmlFor="email" required />
       <InputBox>
         <InputSection>
@@ -146,7 +211,7 @@ const InputSection = styled.div`
     white-space: nowrap;
     font-size: 13px;
     line-height: 18px;
-    width: 74px;
+    width: 64px;
   }
 `;
 

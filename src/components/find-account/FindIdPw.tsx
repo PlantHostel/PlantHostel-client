@@ -3,6 +3,7 @@ import InputLabel from "../common/InputLabel";
 import { Input } from "../common/Input";
 import { CommonButton } from "../common/CommonButton";
 import { useEffect, useState } from "react";
+import { CertCode } from "../common/CertCode";
 
 interface FindIdPwProps {
   type: string;
@@ -12,8 +13,6 @@ interface FindIdPwProps {
 export const FindIdPw = ({ type, method }: FindIdPwProps) => {
   const [isVisible, setIsVisible] = useState(false);
   const [timeLeft, setTimeLeft] = useState(180);
-  const [certCode, setCertCode] = useState("");
-  const [isVerified, setIsVerified] = useState(true);
 
   useEffect(() => {
     let timer: number = 0;
@@ -37,20 +36,6 @@ export const FindIdPw = ({ type, method }: FindIdPwProps) => {
   function clickCertButton() {
     setIsVisible(true);
     setTimeLeft(180);
-  }
-
-  function changeCertCodeInput(e: React.ChangeEvent) {
-    const { value } = e.target as HTMLButtonElement;
-
-    setCertCode(value);
-  }
-
-  function verifyCode() {
-    if (certCode === "123456") {
-      setIsVerified(true);
-    } else {
-      setIsVerified(false);
-    }
   }
 
   return (
@@ -147,39 +132,11 @@ export const FindIdPw = ({ type, method }: FindIdPwProps) => {
       )}
       {isVisible && (
         <>
-          <CertDiv isVerified={isVerified}>
-            <span className="timer">
-              {Math.floor(timeLeft / 60)}:
-              {String(timeLeft % 60).padStart(2, "0")}
-            </span>
-            <Input
-              type="text"
-              id="cert-code"
-              name="cert-code"
-              placeholder="6자리 인증번호를 입력해주세요"
-              onChange={changeCertCodeInput}
-            />
-          </CertDiv>
-          {isVerified ? (
-            <>
-              <div className="small">3분 이내로 인증번호를 입력해주세요.</div>
-              <div className="small">
-                제한시간이 지났거나 인증 메일을 받지 못한 경우
-              </div>
-              <div className="small">인증번호를 다시 받아 주세요.</div>
-            </>
-          ) : (
-            <>
-              <div className="small red">인증번호가 올바르지 않습니다.</div>
-              <div className="small red">
-                다시 입력하거나 인증번호를 다시 받아주세요.
-              </div>
-            </>
-          )}
+          <CertCode visibleState={{ isVisible, setIsVisible }} />
         </>
       )}
       <ButtonSection isVisible={isVisible}>
-        <CommonButton text="다음" onClick={verifyCode} />
+        <CommonButton text="다음" />
       </ButtonSection>
     </FindIdContainer>
   );
@@ -220,7 +177,7 @@ const InputSection = styled.div`
     white-space: nowrap;
     font-size: 13px;
     line-height: 18px;
-    width: 74px;
+    width: 64px;
   }
 `;
 
@@ -232,26 +189,5 @@ const ButtonSection = styled.div<{
 
   button {
     flex: 1;
-  }
-`;
-
-const CertDiv = styled.div<{
-  isVerified?: boolean;
-}>`
-  position: relative;
-  margin-bottom: 12px;
-
-  .timer {
-    position: absolute;
-    right: 15px;
-    top: 16px;
-    font-size: 15px;
-    line-height: 22px;
-    color: #b71c1c;
-    font-family: "Pretendard-Regular";
-  }
-
-  #cert-code {
-    border: ${(props) => (props.isVerified ? "" : "1px solid #b71c1c")};
   }
 `;
