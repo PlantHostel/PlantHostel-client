@@ -29,6 +29,8 @@ import { Magazine } from "../pages/magazine/Magazine";
 import { MagazineDetail } from "../pages/magazine/MagazineDetail";
 import { PlantDictionary } from "../pages/plant-dictionary/PlantDictionary";
 import { WriteMagazine } from "../pages/magazine/WriteMagazine";
+import { Setting } from "../pages/Setting";
+import { Quit } from "../pages/Quit";
 
 export const router = createBrowserRouter([
   {
@@ -105,4 +107,6 @@ export const router = createBrowserRouter([
   { path: "magazine/:id", element: <MagazineDetail /> },
   { path: "plant-dictionary", element: <PlantDictionary /> },
   { path: "magazine/write", element: <WriteMagazine /> },
+  { path: "setting", element: <Setting /> },
+  { path: "quit", element: <Quit /> },
 ]);

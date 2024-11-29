@@ -36,8 +36,10 @@ const Header = styled.header`
   justify-content: space-between;
   padding: 20px;
   width: 100%;
-  box-shadow: 0px 2px 4px rgba(7, 58, 41, 0.08);
-  border-radius: 0px 0px 20px 20px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(8px);
+  border-radius: 0px 0px 6px 6px;
+  background-color: rgba(255, 255, 255, 0.15);
   margin: 0 -20px;
 
   .title {
