@@ -21,6 +21,12 @@ const HeaderDiv = styled.header`
   display: flex;
   align-items: center;
   padding: 20px;
+  width: 100%;
+  margin: 0 -20px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(8px);
+  border-radius: 0px 0px 6px 6px;
+  background-color: rgba(255, 255, 255, 0.15);
 
   div {
     display: flex;
@@ -29,6 +35,10 @@ const HeaderDiv = styled.header`
   .header_left {
     width: 25%;
     justify-content: flex-start;
+
+    button {
+      padding: 0;
+    }
   }
 
   .header_right {
