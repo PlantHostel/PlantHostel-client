@@ -23,6 +23,7 @@ const Button = styled.button<{
   border: none;
   position: relative;
   cursor: pointer;
+  background-color: transparent;
 
   .alarm-count {
     position: absolute;
